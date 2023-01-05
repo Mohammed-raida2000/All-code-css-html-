@@ -1,0 +1,6236 @@
+
+/* {} >> this is curly braces*/
+
+/* 
+Selector{
+    Property: Value ;
+    Property: Value ;
+} 
+*/
+
+.parg {
+    
+    background: chocolate;
+    /* the All color range start from 255 to zero 0 */
+    background: rgb(0 0 0 /50%); /*  red green blue alpha channel */
+    /*color hexa code */
+    background-color: #00ff00; 
+    background-color: #4b1a67; 
+    /* خلفية الصورة نفسها  */
+    background-image: url("../How-To-Become-A-Software-Engineer.png"); 
+    /* repeat >>  background defult بتتكرر حسب الكلام والاشيء داخل الصفحة  */
+    background-repeat: no-repeat;
+    /*************************/
+    /* Background - Attachment, Position, Size */
+    /*  التحكم فالخلفية والتكرار وعدم التكرار ي يمين او شمال او لتحت او لفوق 
+    scroll >> الخلفية بتتحرك مع الكلام 
+    fixed  >> الخلفية ثابتة مع الكلام
+    */
+    background-attachment: fixed;
+    /*   top rigth bottom left موقع الخلفية بالاتجاهات*/
+    background-position: top right ;
+    background-position: top left ;
+    background-position: top center ;
+    /*موقع الخلفية بالmove by pixel*/
+    background-position: 100px;
+    background-position: 20px 90px ;
+    /* move by precnrtige %  wigth higth*/
+    background-position: 40% 60% ;
+
+    /* هعمل كل الاسطر الي فوق في سطر واحد */
+
+    background: rgb(210, 30, 30)
+}    
+.parg {   
+    /* Padding  الهوامش الداخلية*/
+    /* 
+    1- ما بقبل اراقام بالسالب 
+    2- بنتحكم فيه بالبكسل- والاتجاهات- والنسبة المئوية
+    3-  الاهدف من البادنغ هوا التعامل مع الهوامش الداخلية  في الصفحة
+    */
+
+    /* top rigth bottom left */
+    /* 10px 10px 10px 10px */
+    /* OR */
+    /* padding: 10px ; */
+
+    /* top rigth bottom left */
+    /* 10px 20px 10px 20px */
+    /* 10px 15px 20px ?=15px */
+
+    /* padding: 0 0 10px */
+    
+    /* ما في داعي اكتبها زي الي فوق ,فبطريقة الافضل ومختصرة */
+    /* 
+    padding-bottom: 10px;
+    padding-top: 10px; 
+    */
+}
+.parg {
+
+    /* margin الهوامش الخارجية */
+    /* 
+    1- بتحكم فالهوامش الخارجية وبتعامل مع القيم السالبة 
+    2- بقدر اخلي المتصفح يتحكم فيه تلقائي*/
+    /* background-color: azure;
+    padding: 10px;
+    margin: 10%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto; */
+
+}
+
+.parg {
+    
+    /* border >> الحواف */
+    /* بنتحكم في الحواف من خلال البوردر- 1
+    2-اهم اشي فالبوردر لازم نتحكم فيهم همي :
+    لون ونوع حجم البوردور 
+    Syntax: <line-width> || <line-style> || <color>*/
+
+    /* 
+    background-color: #c7dac8;
+    padding: 10px;
+    width: 40%;
+    margin: auto; */
+    /*
+    border-width: 10px;
+    border-color: red green blue yellow;
+    border-style: solid;
+    /* الكود المختصر */
+
+    /* border: 10px red solid; */
+
+    
+}
+
+/*  Display >> Block, Inline Block, Inline  */
+
+/*  Display >> طريقة عرض البيانات فصفحة الويب */
+
+/* 1-Block */
+
+/* 
+1-widht >> بتعامل معاها على انه فول ادا مش موجود full
+2- بحط break line بين كل جملة 
+3- بتتعامل مع الpadding ,margine,wight ,height بدون اي مشاكل
+*/
+
+div{
+    
+    background: #9d9a9a;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 30px;
+
+}
+
+/* Inline 
+1-widht >> بتعامل معاها على انه فول ادا مش موجود full
+2- بحط ماbreak line بين كل جملة 
+3- بتتعامل مع الpadding ,margineبدون اي مشاكل[left -rigth]
+
+*/
+span {
+
+    background-color: #9d9a9a;
+    padding: 20px ;
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+
+}
+
+p {
+    color: rgb(17, 8, 25);
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+/*<element class="p">*/
+.one {
+    color: rgb(226, 43, 95);
+    font-size: 15px;
+}
+/* <element id="p"> */
+#one {
+    color: rgb(43, 226, 64);
+    font-size: 15px;
+}
+
+/* Name Conventions And Rules */
+/* مراجع https://elzero.org/css-formatting-guide/ */
+
+/***************/
+/* Element Visibility And Use Cases */
+
+/* 
+1-display: none; 
+هان بنستخدمها في اخفاء العناصر واظهارها فالعادة */
+
+/* التطبيقات عليها مثلا عنا مثلا منتجات كتيرة وعليها وصف كتيرة
+ ,هنظغط على زر مثلا بالجافا سكربت يظهر الداتا ولما تظغط تاني يرجعها  */
+/* العنصر المخفي فالصفحة بكون ملوش اثر فيها يعني مش مباين بالمرة  */
+
+/* *********** */
+/* 2-visibility: hidden;  
+بنستخدمها فالعادة فالاشياء الي بدنا اياها فالإينميشن والاشياء الي بدنا ياها تتحرك بشكل ناعم فالصفحة */
+div {
+    background-color: goldenrod;
+    margin: 10px 0px;
+    /* display: none; */
+    /* visibility: hidden; */
+}
+
+/* dispaly >> باخد مطرح العنصر المخفي خالص فالصفحة */
+.one {
+    display: none;
+}
+
+/* visibility: hidden;  بيضل مكان العنصر المخفي فالصفحة محجوز للعنصر نفسوا بدون ما العنصر الي بعدوا ياخد مطرحوا */
+.one {
+    visibility: hidden;
+}
+/* ******** */
+<body>
+    <div class="one"><p>welcome</p></div>
+    <div class="two"><p>hey</p></div>
+    <div class="three"><p>hello</p></div>
+    <div class="four"><p>Hi</p></div>
+</body>
+
+/* هان بدنا نشوف الخصائص المشتركة ونحطها فجروب ولما نعدل بنعدل عالكل */
+.one {
+    color: rgb(255, 0, 0);
+    border-bottom: 2px solid red;
+}
+.two {
+    color: green;
+    border-bottom: 2px solid green;
+}
+.three {
+    color: rgb(0, 11, 128);
+    border-bottom: 2px solid rgb(11, 0, 128);
+}
+.four {
+    color: rgb(0 0 0);
+
+    border-bottom: 2px solid  rgb(0 0 0);
+}
+.one,
+.two,
+.three,
+.four {
+    background-color: #EEE;
+    padding: 10px;
+    margin: 10px;
+}
+/*****************/
+<body> 
+    <div >
+        <h1>PADE TITLE</h1>
+        <p>Hi DEAR in side div</p>
+        <p class="special">Hi DEAR in side div</p>
+    </div>
+    <div>
+        <p>Hi DEAR out side div</p>
+    </div>  
+</body>
+/*********css*********/
+<body> 
+    <div >
+        <h1>PADE TITLE</h1>
+        <p>Hi DEAR in side div</p>
+        <p class="special">Hi DEAR in side div</p>
+    </div>
+    <div>
+        <p>Hi DEAR out side div</p>
+    </div>  
+</body>
+
+/* Nesting>> الهدف منوا انوا تمنع تداخل الفقرات والديفات والاوانهم مع بعض */
+
+/* div .special{
+    
+    background-color: #EEE;
+    color: blueviolet;
+
+}  */
+
+/* هيعطي الالوان لكل اشي جوات ال div */
+/* div  {
+    background-color: #EEE;
+    color: blueviolet;
+
+}  */
+
+/***************/
+/*dimention width - and hight*/
+<body> 
+    <div >mohammed</div>
+    <hr>
+    <div>mohammed hazem</div>
+    <hr>
+    <div>mohammed hazem hassen</div>
+    <hr>
+    <div>mohammed hazem hassen abu raida</div>
+</body>
+
+div {
+    background-color: goldenrod;
+    padding: 10px;
+    display: inline-block;
+    /* width: 200px; */
+    /* max-width: 400px;
+    min-width: 400px; */
+/*     
+    min-width: 400px;
+    max-width: 400px;
+    height: 40px;
+    max-height: 100px; */
+    /* width: fit-content;>بتعطيك هان العرض بالزبط على مقاس النص  */
+    width: fit-content; 
+}
+/*******************/
+<body> 
+    <div>
+        https://www.youtube.com/watch?v=FQLRSbVdk28&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=16
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Quisquam recusandae, molestias laudantium dolorum voluptatem
+        aspernatur sunt nam impedit possimus perspiciatis ratione minus, hic,
+        voluptatum vel libero. Eum commodi voluptate error?</div>
+</body>
+
+/* overflow: overflow-x: & overflow-y: */
+div {
+    background-color: #EEE;
+    padding: 20px;
+    margin: 2px auto ;
+    height: 150px;
+    width: 150px;
+    border-radius: 2px; /* بلعب في حواف البوردر او الازرار */
+
+    /* overflow: بتحكم فالنص يمين شمال وظاهر ومخفي حسب البوكس المخصص لنص والنص الي برا المحتوى */
+    overflow: scroll;
+    /* 
+    overflow: hidden;
+    overflow: auto;
+    overflow: visible;
+    overflow-y: hidden;
+    overflow-x: hidden;*/
+}
+/******/
+<body> 
+    <div class="one">Titel page</div>
+</body>
+
+/*  text-shadow: 0px 1px 1px greenyellow;
+بنعمل ظل للنص  */
+
+.one  {
+    background-color: #EEE;
+    margin: 2px;
+    padding: 2px;
+    text-shadow: 0px 1px 1px greenyellow;
+    border: 1px;
+    /* text-align: center; *//*بتحكم فالنص شمال يمين  وسط*/
+    border-bottom: 1px solid brown;
+    /* width: fit-content; */
+    
+}
+
+<body> 
+    <div class="assign-1-shape-1">Normal Div</div>
+    <div class="assign-1-shape-2">Normal Div</div>
+    <div class="assign-1-shape-3">Normal Div</div>
+    <hr>
+    <div class="one">
+        <p>shape1</p>
+        <p>shape1</p>
+        <p>shape1</p>
+    </div>
+</body>
+
+
+.assign-1-shape-1{
+
+    background-color: blueviolet;
+    padding: 20px;
+    width: 500px;
+    color: white;
+    /* color: #8a2be2; */
+    /* color: hsl(271, 76%, 53%); */
+    /* color: hwb(271 17% 11%); */
+    margin: 5px;
+}
+
+.assign-1-shape-2 {
+    background-color: rgb(138, 44, 226, 0.64);
+    color: white;
+    padding: 20px;
+    width: 500px;
+    margin: 5px;
+}
+
+.assign-1-shape-3 {
+    background-color: rgb(138, 44, 226, 0.4);
+    color: white;
+    padding: 20px;
+    width: 500px;
+    margin: 5px;
+}
+
+/* ********** */
+.one{
+    width: 400px;
+    height: 400px;
+    background-image: url(../Css/css-assignment-5-8.png);
+    
+    color: brown;
+    font-weight: bold;
+    background-color: #eee;
+    /* في Shape 1 قم بجعل الخلفية لا تتكرر نهائيا
+    background-repeat: no-repeat;*/
+    /*  في Shape 2 قم بجعل الخلفية تتكرر طوليا فقط
+    background-repeat-y: repeat;*/
+    /* في Shape 3 قم بجعل الخلفية تتكرر عرضيا فقط
+        background-repeat-x: repeat;
+    */
+    /* في Shape 2 قم بجعل الخلفية تتكرر طوليا فقط ومكانها يكون ناحية اليمين
+    background-repeat-x: no-repeat;
+    background-image: url(../Css/css-assignment-5-8.png);
+    background-position: right; */
+    /* في Shape 3 قم بجعل الخلفية تتكرر عرضيا فقط ومكانها يكون ناحية الأسفل
+    background-repeat-y: no-repeat;
+    background-position: bottom; */
+    /*في Shape 4 قم بجعل الخلفية تتكرر طوليا وعرضيا
+    background-image: url(../Css/css-assignment-5-8.png);
+    background-repeat: repeat;*/
+
+}
+/********text alignment******* */
+<body> 
+    <div>Titel <img src="https://via.placeholder.com/30" alt="loading..">page.!</div>
+</body>
+
+div {
+    background-color: #EEE;
+    padding: 2px;
+    margin: 1px;
+    /* border-bottom:1px solid rgb(244, 1, 1);
+    border-radius: 6px;
+    /* التحكم فالنص يمين شمال فالنص  */
+    /* text-align: left; */ 
+    /* بتحكم فالصفحة عربي او انجليزي ltr or rtl */
+    direction: ltr;
+    /* direction: rtl; */
+    /* بدنا نحط صورة مع النص ونتحكم فيها bottom */
+    
+    text-align: center ;
+}
+
+/****************/
+/* Text - Decoration>> 
+بنستخدموا عشان نزين النص ونشيل منوا الخطوط  ونحطلوا خطوا زي مثلا فالروابط  الخارجية */
+/* Text - Transform >> */
+<body> 
+    <div class="one">mohammed</div>
+    <a href="#">Google </a>
+</body>
+
+.div {
+
+    background-color: #EEE;
+    padding: 1px;
+    margin: 1px;
+    border-block: 2px;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: underline;
+    
+    background: #eee;
+    padding: 2px;
+    margin: 2px;
+    /* بتعمل الحواف على شكل زر  */
+    display: inline-block;
+    border-radius: 2px;
+
+    background: #eee;
+    padding: 2px;
+    margin: 2px;
+    display: inline-block;
+    border-radius: 2px;
+    /* بتمسح الخطوط  من تحت الراوبط*/
+    text-decoration: none;
+    color: red;
+}
+
+
+.one{
+    background-color: #EEE;
+    /* بتحكم فالكلام من جوات ملف الhtml كابتل او سمول او حرف كابتل ... */
+    text-transform: uppercase;
+}
+/**********/
+/*********************/
+/* Text - Overflow And Use Cases */
+<body> 
+    <div>
+        <p title="welcome to elzero web  school in web site">welcome to elzero web  school in web site </p>
+    </div>
+    
+</body>
+
+p {
+    background-color: #EEE;
+    padding: 1px;
+    border: 2px solid #9e9e9e;
+    width: 200px;
+    white-space: nowrap;
+    /* بتخفي النص لزيادة */
+    overflow: hidden;
+    /* بتقص النص لزيادة  */
+    text-overflow: ellipsis;
+}
+/**************/
+
+/* #22 - Inheritance   الوراتة */
+<body> 
+    <div>
+        <h3>alzero web school</h3>
+        <div class="one">
+            <p>welcome in your website</p>
+        </div>
+    </div>
+</body>
+
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+div {
+    background-color: #eee;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    
+
+.one {
+    border: 2px soild ;
+    border-color: inherit;
+    padding: inherit;
+}
+
+/******/
+<body>
+    <div>
+    <p>This Is Paragraph</p>
+    </div>
+</body>
+/*---الدروس من رقم 22 إلى رقم 26 تكليف 1---*/
+div {
+    text-align: center;
+    font-size: 21px;
+    font-family: sans-serif;
+    border: 3px solid;
+    border-color: blueviolet;
+    padding: 25px;
+}
+p {
+
+    border: inherit;
+    margin: 4px;
+    padding: 27px;
+    background-color: #EEE;
+}
+/*******تكليف 2********/
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+</head> 
+<body>
+    <div>
+    <p class="one">Elzero Web School</p>
+    <p class="two">Elzero Web School</p>
+    <p class="three">Elzero Web School</p>
+
+    </div>
+</body>
+
+body {
+    text-align: center;
+}
+div .one {
+    font-family: 'Open Sans', sans-serif;
+    background-color: burlywood;
+}
+div .two {
+
+    background-color: aquamarine;
+    font-family: 'Cairo', sans-serif;
+}
+div .three {
+    font-family: 'Jomhuria', cursive;
+    background-color: thistle;
+}
+/***************/
+/* 
+#*** font size and css unit***#
+<body> 
+    <div>
+        welcome in your <span>website</span> 
+    </div>
+</body>
+
+/************/
+/* التكليف 03 */
+/* font size  defult  in web is 16px */
+<html lang="en" 
+    style="
+    font-size: 20px"
+    /* font-size: 16px;*/>
+
+<body>
+    <div>
+    <p> class="one">Elzero Web School</p>
+    <p> class="two">Elzero Web School</p>
+    <p> class="three">Alzero Web School</p>
+    </div>
+</body>    
+body {
+    text-align: center;
+    background-color: #eee;
+}
+.one {
+    font-size: 2.5rem;  /*body pxبيورث الخط الاساسي من البادي الاساسي هوا 16 بكسل ولكن احنا غيرناه ل20بيكسل 
+    ==font-size: 50px; نفسوا بس بال rem2.5 rem*/
+    
+}
+.two {
+    
+    font-size: 2rem;/* ==font-size: 40px; نفسوا بس بال rem*/
+}
+.three {
+    font-size: 2rem;/* ==font-size: 30px; نفسوا بس بال rem*/
+}
+/**********-/ 
+There are two types of length units: absolute and relative.
+1- absolute units : {cm mm pt in ...}  بنصحش فيه لما يكون  صفحة الويب ريسبونسف لان  الاطوال ثابتة 1بيكسل يعني1 بيكسل بدون  تغير  بتكون ة  responsev 
+2- Relative Lengths : بتحرك بشكل نسبي 
+
+css unit = px rem em %
+1- Px > الوحدة اليناميكي >>absolute unit وحدة ثابتة 
+2- em > 1em =1 time the size of the current font.
+3- vh  > viewport hight.. root time 
+6- vw > veiwport width..1vw = 1% of viewport width ,
+مهمة جدا في عالم الresponsive!! بتتمدد حسب ابعاد الصفحة تلقائيا! 
+-------------------------
+فرضا كان ابعاد الصفحة 
+900px X 617px
+5vw = 5 X 9%  = 45%
+5vh = 5 X 6.17% = 30.85%
+-------------------------
+4- precentage %
+5- rem =The rem unit sets the font-size relative to the browsers base font-size 
+=16PX, and will not inherit from its parents. 
+7- vmin
+
+# tips >>>
+vw = veiwport width > root time كيف بتشتغل ؟؟! 
+
+فرضا كان ابعاد الصفحة 
+900px X 617px فهان كل 
+1vw =9% من ابعاد الصفحة
+يعني 
+************
+فرضا كان ابعاد الصفحة 
+900px X 617px
+5vw = 5 X 9%  = 45%
+5vh = 5 X 6.17% = 30.85%
+
+*/
+
+div {
+    font-size: 20px;
+}
+
+div span {
+    font-size: 2vw;
+}
+
+/************/
+/* #26 - Mouse Cursor */
+
+/* بتخلي النص  الي فصفحة الويب يكون حسب ما بدك cursor*/
+<body> 
+
+    <a href="#">Googel</a>
+    <span>Test</span>
+    <button>Clik</button>
+    
+    <hr />
+    <p class="one"> Test P</p>
+    <p class="Two"> Test P</p>
+    <p class="Three"> Test P</p>
+</body>
+
+body {
+    background: none;
+    border: none;
+    color: #4caf50;
+    font-weight: bold;
+    /* النص شفاف  */
+    background: transparent;
+    cursor: pointer;
+} 
+/************تكليفات CSS الدروس من 09 إلى 12***************/
+<body> 
+    <div class="one">shape1</div>
+    <div class="two">shape2</div>
+    <div class="three">shape3</div>
+</body>
+.one {
+    /* عرض العناصر جنب بعض */
+    display: inline-block;
+    background-color: #eee;
+    padding: 20px;
+    margin: 5px;
+    border: 5px #fe0000 solid;
+    outline-style: solid;
+    
+    
+}    
+
+.two {
+    display: inline-block;
+    background-color: #eee;
+    padding: 20px;
+    margin: 5px;
+    border: 5px solid;
+    border-color: blue green;
+    outline-style: solid;
+}
+
+.three {
+    background: #eee;
+    color: black;
+    padding: 20px;
+    display: inline-block;
+    margin: 5px;
+    border: 5px dashed;
+    border-color: blue green yellow red
+    outline-style: solid;
+}
+
+/* التكليف 02 */
+
+<body> 
+    <div class="one"><span>-</span> ThisIs Important Note-1</div>
+    <div class="two"><span>-</span>This Is Important Note-2</div>
+    <div class="three"><span>-</span>This Is Important Note-3</div>
+</body>
+
+.one,
+.two,
+.three {
+    padding-block: 20px;
+    width: 400px;
+    padding: 24px;
+    margin-block: 15px;
+}
+
+.one {
+    background-color: #EEE;
+    font-family: sans-serif;
+}
+.one span {
+    background-color: #ff2372;
+    height: 10px;
+    width: 40px;
+    padding-block: 15px;
+}
+.two {
+    background-color: #EEE;
+    font-family: sans-serif;
+    visibility: hidden;
+}
+.two span {
+    background-color: #0cf378;
+    height: 10px;
+    width: 40px;
+    padding-block: 15px;
+}
+.three {
+    background-color: #EEE;
+    font-family: sans-serif;
+}
+.three span {
+    background-color: #23aeff;
+    height: 10px;
+    width: 40px;
+    padding-block: 15px;
+}
+
+
+/* الدروس من رقم 13 إلى رقم 16 */
+<body> 
+    <div class="parent">
+    <div class="child">This Is Child <span class="title">Title</span></div>
+    <span class="title">Child Title</span>
+    <p>Paragraph Content</p>
+</div>
+<div class="title">Section Title</div>
+</body>
+
+.parent .child .title {
+    background-color: brown;
+}
+.parent .title  {
+    background-color: blue;
+} 
+
+p {
+    background-color: green;
+}
+
+.title {
+    background-color: green;
+}
+/*جمع مع بعض */
+p ,
+.title 
+{
+    background-color: green;
+}
+
+
+/* الدروس من رقم 17 -21 */
+<body> 
+    <div class="one">Title One</div>
+    <div class="two">Title Two With More Words</div>
+    <div class="three">Title Three With More More More Words</div>
+    <div class="four">
+        Title Three With More More More Words Title
+        Three With More More More Words
+        Title Three With More More More Words
+        Title Three With More More More Words
+        Title Three With More More More Words
+        Title Three With More More More Words
+        Title Three With More More More Words
+        Title Three With More More More Words
+    </div>
+</body>
+
+.one {
+    background-color: crimson;
+    display: block;
+    width: fit-content;
+    padding-block: 15px;
+    padding: 15px;
+    display: block;
+    margin-block: 20px;
+    color: white;
+    font-family: sans-serif;
+    
+}
+.two {
+    background-color: crimson;
+    display: block;
+    width: fit-content;
+    padding-block: 15px;
+    padding: 15px;
+    display: block;
+    margin-block: 20px;
+    color: white;
+    font-family: sans-serif;
+
+}
+.three {
+    background-color: crimson;
+    width: fit-content;
+    padding-block: 15px;
+    padding: 15px ;
+    margin-block: 15px;
+    display: block;
+    color: white;
+    font-family: sans-serif;
+}
+.four {
+    background-color: crimson;
+    max-width: 400px;
+    max-height: 100px;
+    padding-block: 15px;
+    padding: 15px ;
+    margin-block: 15px;
+    display: block;
+    color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+    height: 200px;
+    width: 400px;
+}
+/*************/
+/* # Float and clear lect: 27 */
+
+<body>
+    <div class="parent">
+        <div> product one </div>
+        <div> product two </div>
+        <div> product three </div>
+        <div> product four </div>
+        <p class="clear"></p>
+    </div>
+    <p>this p for testing float</p>
+</body>
+
+.parent {
+    background-color: #eee;
+    padding: 10px ;
+}
+
+.parent div {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #1e92f7;
+    float: left;/* بتخلي العنصر عائم فالصفحة*/
+    width: 25%; /* full width 100%  and 4 elements =25% */
+}
+/* عشان نخلي السطر ما يتداخل   يدخل مع الي قبلوا */
+.clear {
+    clear: both;
+}
+/*********/
+<body>
+        <div > product one </div>
+        <div class="parent"><div class="two"> product two </div></div>
+</body>
+
+/* float , opacity >> العومان والشفافية */
+/* postions :- بتحرك العنصر وين ما بدك 
+
+1- static = default value ما بتأثر باي حركة  خارجية
+2- reletive =نسبي => بتحرك العنصي بالنسة لنفسوا وبالنسبة لغيروا,يعني بتأثر باي حركة من فوق ومن تحت ومن اي مكان  بالنسبة 
+3- absolute =مطلق=> ما بتحرك العنصر بالنسبة لغيروا وبكون حركة او انتقال خاص فيه
+4-fixed = افضل استخداماتوا هوا الزر الي بكون فاسفل الشاعة وبطلعك لاولها 
+
+The position CSS property sets how an element is positioned in a document.
+The top, right, bottom, and left properties 
+determine the final location of positioned elements.
+
+Syntax: static | relative | absolute | sticky | fixed
+*/
+body {
+    margin: 0;
+    background-color: #eee;
+    /* عشان نعمل سكرول لصفحة وتطلع كبيرة */
+    height: 5000px; 
+}
+
+
+.two {
+    background-color: rgb(79, 43, 115 ,0.5); 
+    /* opacity :  بتعمل شفافية لبلوك كامل */
+    opacity: 0.9;
+    position: absolute;
+    top: 92px;
+    left: 86px;
+    height: fit-content;
+    width: fit-content;
+    opacity: 0.9;
+    right: 0;
+    bottom: 0;
+}
+.one {
+    position: fixed;
+}
+.parent {
+    background-color: rgb(39, 158, 158);
+    height: 200px;
+    width: 300px;
+    position: relative;
+
+}
+
+div {
+    background-color: rgb(132, 77, 126);
+    text-align: center;
+    float: left;
+    width: calc((100% - 90px)/5);
+    padding-bottom: 10px;
+    padding-top: 12px;
+    margin-left: 15px; /* الهوامش بين كل عنصر والي جنبوا* /
+    
+}
+
+/*  if # margin-left: 1px الفراغ<>and<> 5 spaces (4elementes)
+
+full width =100% 
+5 space * 1px= 5px from full width
+100% -5px = 95px available from full width
+4 elements => 95px / 4 => (23.75 / elements)
+*/
+
+/*  if # margin-left: 15px <>and<> 6spaces (5elementes)
+
+full width =100% 
+6 space * 15px=> 90px from full width
+100% -90px => 10px available from full width
+6 elements  => ((100% -90px)/5)
+*/
+/***********/
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Magni beatae laudantium qui ea doloribus,
+        quam natus unde incidunt iure neque, delectus id, 
+        voluptate eos omnis laborum ab cumque repellendus quia.
+    </p>
+    <div>sticky scroll</div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Magni beatae laudantium qui ea doloribus,
+        quam natus unde incidunt iure neque, delectus id, 
+        voluptate eos omnis laborum ab cumque repellendus quia.
+    </p>
+
+/*stiky scroll >> بكون فيه مثلا روابط مهمة ولازم تبقى قدام المستخدم وايش ما تحرك بالصفحة بتضل ثابتة  */
+body {
+     heigth ="1000px"
+     }
+
+div {
+    
+    background-color: rgb(222, 131, 13);
+    padding: 5px;
+    position: sticky;
+    /* عشان تبقى معلقة باعلى الصفحة وما تروح لبعيد */
+    top: 0;
+
+}
+/***********************/
+
+/* #31 - Z-Index >>برتب الطبقات حسب الاهمية مثلا  *
+/* list style= "none" >>بتشيل النقطة الي جنب العناصر الي غير مرتبة*/
+/<body>
+    <div class="One">One</div>
+    <div class="Two">Two</div>
+    <div class="Three">Three</div>
+
+</body>
+
+div {
+    padding: 10px;
+    background: #eee;
+    text-align: center;
+    width: 100px;
+    position: absolute;
+}
+.One {
+    background: rebeccapurple;
+    left: 26px;
+    top: 20px;
+    z-index: 10;
+}
+
+.Two {
+    background: #a16216;
+    left: 17px;
+    top: 14px;
+}
+.Three {
+    background: burlywood;
+}
+
+/***********************/
+/********************************/
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Email</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>moha</td>
+                <td class="age">22</td>
+                <td>moh@m.mo</td>
+            </tr>
+            <tr>
+                <td>rami</td>
+                <td class="age">2</td>
+                <td>moh@m.mo</td>
+            </tr>
+            <tr>
+                <td>sama</td>
+                <td class="age">20</td>
+                <td>moh@m.mo</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    width: 100%;
+    /* border: 1px solid #eee; */
+    border-spacing: 1px;
+}
+table td {
+    background-color: bisque;
+    padding: 10px;
+    border-spacing: 1px;
+    /* border: px solid #eee; */
+}
+table thead td {
+    background-color: brown;
+    text-align: center;
+    font-weight: bold;
+}
+table tbody .age {
+    text-align: center;
+    font-weight: bold;
+}
+/********************************/
+/* pseudo classes >> الكلاسات المزيفة فخامة يكير */
+<body>
+    <div class="element">Normail Element</div>
+    <hr>
+    <img src="http://via.placeholder.com/80" alt="Loading...">
+    <hr>
+    <a href=https://www.google.com>Link1</a>
+    <a href="https://www.facebook.com">Link1</a>
+    <a href="https://www.kaggel.com">Link3</a>
+    <hr>
+    <form action="">
+        <div class="text"><input type="text"></div>
+        <div>
+            <input class="ch" id="checkbox" type="checkbox">
+            <label for="checkbox">Testing box</label>
+        </div>
+    </form>
+</body>
+
+.element {
+    background-color: blueviolet;
+    color: white;
+}
+/* بتغير لون  الينكات وبتشيل الخط  من تحتيه */
+a { 
+    color: green;
+    text-decoration: none;
+}
+/* لما تحط  الكارسور على العنصر بغير لونوا مؤقت */
+a:hover {
+    color: blue;
+}
+a:visited {
+    color: brown;
+}
+/* بيخفي العنصر لما تعمل تشيك عليه */
+.ch:checked  {
+    display: none;
+}
+.text:focus {
+    border-color: rgb(60, 159, 139);
+    outline: none
+}
+/**************************/
+/******************/
+<body>
+    <div class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing 
+        t. Explicabo provident tenetur nesciunt culpa 
+        molestias dicta quia tempore asperiores aliquam, 
+        expedita animi autem ullam similique, recusandae labore mollitia pariatur cum. Quo?
+    </div>
+    <hr>
+    <div class="two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo provident tenetur nesciunt culpa 
+        molestias dicta quia tempore asperiores aliquam, 
+        expedita animi autem ullam similique, recusandae labore mollitia pariatur cum. Quo?
+    </div>
+    <hr>
+    <div class="three">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo provident tenetur nesciunt culpa 
+        molestias dicta quia tempore asperiores aliquam, 
+        expedita animi autem ullam similique, recusandae labore mollitia pariatur cum. Quo?
+    </div>
+</body>
+/* 
+pseudo class (:)الكلاس المزيف
+pseudo elements (::) العنصر المزيف
+*/
+/* : :: >>  ::حطيناهم عشان نفرق بين العنصر: وبين الكلاس 
+حطيت واحد : ولا إتنين عادي هيشتغلن */
+
+/* هان حرف واحد  او عنصر بتحكم فيه وبغير فخصائصوا */
+.one:first-letter {
+    color: blueviolet;
+    background-color: black;
+    font-size: 60px;
+}
+/*::first-line >>اول سطر من الفقرة   */
+.two::first-line {
+    color: rgb(179, 51, 130);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+/* ::selection >> بتختار عنصر او اسطر من فقرة على شكل مميز ولون مميز مخصوص */
+.three::selection {
+    color: greenyellow;
+    background-color: black;
+}
+/********* Pseudo Elements - Before, After, Content*********/
+<body>
+    <div class="perant">
+        <div class="litter">M</div>
+        <div class="paragraph" data-text="&#167;العناصر مهمة جدا">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusamus, 
+            quod necessitatibus eum quo magnam voluptas natus iusto ad voluptatum? Esse,
+            perspiciatis totam reprehenderit cupiditate neque veritatis at assumenda repellendus.
+        </div>
+    </div>
+    <div class="perant">
+        <div class="litter">R</div>
+        <div class="paragraph" data-text="&#167;العناصر مهمة جدا">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusamus, 
+            quod necessitatibus eum quo magnam voluptas natus iusto ad voluptatum? Esse,
+            perspiciatis totam reprehenderit cupiditate neque veritatis at assumenda repellendus.
+        </div>
+    </div>
+    <div class="perant">
+        <div class="litter">O</div>
+        <div class="paragraph"data-text="&#167;العناصر مهمة جدا">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusamus, 
+            quod necessitatibus eum quo magnam voluptas natus iusto ad voluptatum? Esse,
+            perspiciatis totam reprehenderit cupiditate neque veritatis at assumenda repellendus.
+        </div>
+    </div>
+    <hr>
+    <ul>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+</body>
+
+/* #36 - Pseudo Elements - Before, After, Content مهم  جدا جدا الدرس  */
+.perant {
+    margin-bottom: 20px;
+    /*    بتخفي بين الفقرات والنصوص  */
+    overflow: hidden; 
+    /* العداد.. بنسميه زي ما بدنا */
+    counter-increment: counter_inc;
+}
+.litter {
+    
+    background-color: royalblue;
+    position: relative;
+    float: left;
+    padding: 17px;
+    height: 50px;
+    width: 50.5px;
+    text-align: center;
+    font-size: 50px;
+    margin-right: 20px;
+
+}
+.paragraph {
+    background-color: #eee;
+    float: left;
+    position: relative;
+    width: 600px;
+    padding: 10px;
+
+}
+
+/* عشان  نعمل بار ويكون مخفي فالكود   */
+/*content: ""; >>لازم الكونتنت تكون  موجودة عشان تشتغل االافتر after  */
+السودوا ايلمنت  عشان  تشتغل لازم يكون  معها  الكونتنت >> contant & pusedo elements
+
+/* .paragraph::after {
+    content: "";
+    background: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 115px;
+    width: 8px;
+} */
+
+/* بدنا نعمل عداد فاخر المحتوى  */
+/* .paragraph::after {
+    content: counter(counter_inc);
+    background: rgb(61, 53, 100);
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    height: 27px;
+    width: 8px;
+    color: white;
+    margin: -22px;
+    width: 30px;
+    text-align: center;
+} */
+/**********************************/
+/* هان بنخفي العنصر ومجرد ما تعمل هوفر الو بيضهر  */
+/* <div class="paragraph" data-text="&#167; العناصر مهمة جدا"> */
+/* attr() >> attrebueits*/
+.paragraph::after {
+    content: attr( data-text);
+    display: none;
+}
+
+.paragraph:hover::after {
+    display: block;
+}
+/*************************************
+
+/* {} >> this is curly braces*/
+
+/* 
+Selector{
+    Property: Value ;
+    Property: Value ;
+} 
+*/
+
+.parg {
+    
+    background: chocolate;
+    /* the All color range start from 255 to zero 0 */
+    background: rgb(0 0 0 /50%); /*  red green blue alpha channel */
+    /*color hexa code */
+    background-color: #00ff00; 
+    background-color: #4b1a67; 
+    /* خلفية الصورة نفسها  */
+    background-image: url("../How-To-Become-A-Software-Engineer.png"); 
+    /* repeat >>  background defult بتتكرر حسب الكلام والاشيء داخل الصفحة  */
+    background-repeat: no-repeat;
+    /*************************/
+    /* Background - Attachment, Position, Size */
+    /*  التحكم فالخلفية والتكرار وعدم التكرار ي يمين او شمال او لتحت او لفوق 
+    scroll >> الخلفية بتتحرك مع الكلام 
+    fixed  >> الخلفية ثابتة مع الكلام
+    */
+    background-attachment: fixed;
+    /*   top rigth bottom left موقع الخلفية بالاتجاهات*/
+    background-position: top right ;
+    background-position: top left ;
+    background-position: top center ;
+    /*موقع الخلفية بالmove by pixel*/
+    background-position: 100px;
+    background-position: 20px 90px ;
+    /* move by precnrtige %  wigth higth*/
+    background-position: 40% 60% ;
+
+    /* هعمل كل الاسطر الي فوق في سطر واحد */
+
+    background: rgb(210, 30, 30)
+}    
+.parg {   
+    /* Padding  الهوامش الداخلية*/
+    /* 
+    1- ما بقبل اراقام بالسالب 
+    2- بنتحكم فيه بالبكسل- والاتجاهات- والنسبة المئوية
+    3-  الاهدف من البادنغ هوا التعامل مع الهوامش الداخلية  في الصفحة
+    */
+
+    /* top rigth bottom left */
+    /* 10px 10px 10px 10px */
+    /* OR */
+    /* padding: 10px ; */
+
+    /* top rigth bottom left */
+    /* 10px 20px 10px 20px */
+    /* 10px 15px 20px ?=15px */
+
+    /* padding: 0 0 10px */
+    
+    /* ما في داعي اكتبها زي الي فوق ,فبطريقة الافضل ومختصرة */
+    /* 
+    padding-bottom: 10px;
+    padding-top: 10px; 
+    */
+}
+.parg {
+
+    /* margin الهوامش الخارجية */
+    /* 
+    1- بتحكم فالهوامش الخارجية وبتعامل مع القيم السالبة 
+    2- بقدر اخلي المتصفح يتحكم فيه تلقائي*/
+    /* background-color: azure;
+    padding: 10px;
+    margin: 10%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto; */
+
+}
+
+.parg {
+    
+    /* border >> الحواف */
+    /* بنتحكم في الحواف من خلال البوردر- 1
+    2-اهم اشي فالبوردر لازم نتحكم فيهم همي :
+    لون ونوع حجم البوردور 
+    Syntax: <line-width> || <line-style> || <color>*/
+
+    /* 
+    background-color: #c7dac8;
+    padding: 10px;
+    width: 40%;
+    margin: auto; */
+    /*
+    border-width: 10px;
+    border-color: red green blue yellow;
+    border-style: solid;
+    /* الكود المختصر */
+
+    /* border: 10px red solid; */
+
+    
+}
+
+/*  Display >> Block, Inline Block, Inline  */
+
+/*  Display >> طريقة عرض البيانات فصفحة الويب */
+
+/* 1-Block */
+
+/* 
+1-widht >> بتعامل معاها على انه فول ادا مش موجود full
+2- بحط break line بين كل جملة 
+3- بتتعامل مع الpadding ,margine,wight ,height بدون اي مشاكل
+*/
+
+div{
+    
+    background: #9d9a9a;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 30px;
+
+}
+
+/* Inline 
+1-widht >> بتعامل معاها على انه فول ادا مش موجود full
+2- بحط ماbreak line بين كل جملة 
+3- بتتعامل مع الpadding ,margineبدون اي مشاكل[left -rigth]
+
+*/
+span {
+
+    background-color: #9d9a9a;
+    padding: 20px ;
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+
+}
+
+p {
+    color: rgb(17, 8, 25);
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+/*<element class="p">*/
+.one {
+    color: rgb(226, 43, 95);
+    font-size: 15px;
+}
+/* <element id="p"> */
+#one {
+    color: rgb(43, 226, 64);
+    font-size: 15px;
+}
+
+/* Name Conventions And Rules */
+/* مراجع https://elzero.org/css-formatting-guide/ */
+
+/***************/
+/* Element Visibility And Use Cases */
+
+/* 
+1-display: none; 
+هان بنستخدمها في اخفاء العناصر واظهارها فالعادة */
+
+/* التطبيقات عليها مثلا عنا مثلا منتجات كتيرة وعليها وصف كتيرة
+ ,هنظغط على زر مثلا بالجافا سكربت يظهر الداتا ولما تظغط تاني يرجعها  */
+/* العنصر المخفي فالصفحة بكون ملوش اثر فيها يعني مش مباين بالمرة  */
+
+/* *********** */
+/* 2-visibility: hidden;  
+بنستخدمها فالعادة فالاشياء الي بدنا اياها فالإينميشن والاشياء الي بدنا ياها تتحرك بشكل ناعم فالصفحة */
+div {
+    background-color: goldenrod;
+    margin: 10px 0px;
+    /* display: none; */
+    /* visibility: hidden; */
+}
+
+/* dispaly >> باخد مطرح العنصر المخفي خالص فالصفحة */
+.one {
+    display: none;
+}
+
+/* visibility: hidden;  بيضل مكان العنصر المخفي فالصفحة محجوز للعنصر نفسوا بدون ما العنصر الي بعدوا ياخد مطرحوا */
+.one {
+    visibility: hidden;
+}
+/* ******** */
+<body>
+    <div class="one"><p>welcome</p></div>
+    <div class="two"><p>hey</p></div>
+    <div class="three"><p>hello</p></div>
+    <div class="four"><p>Hi</p></div>
+</body>
+
+/* هان بدنا نشوف الخصائص المشتركة ونحطها فجروب ولما نعدل بنعدل عالكل */
+.one {
+    color: rgb(255, 0, 0);
+    border-bottom: 2px solid red;
+}
+.two {
+    color: green;
+    border-bottom: 2px solid green;
+}
+.three {
+    color: rgb(0, 11, 128);
+    border-bottom: 2px solid rgb(11, 0, 128);
+}
+.four {
+    color: rgb(0 0 0);
+
+    border-bottom: 2px solid  rgb(0 0 0);
+}
+.one,
+.two,
+.three,
+.four {
+    background-color: #EEE;
+    padding: 10px;
+    margin: 10px;
+}
+/*****************/
+<body> 
+    <div >
+        <h1>PADE TITLE</h1>
+        <p>Hi DEAR in side div</p>
+        <p class="special">Hi DEAR in side div</p>
+    </div>
+    <div>
+        <p>Hi DEAR out side div</p>
+    </div>  
+</body>
+/*********css*********/
+<body> 
+    <div >
+        <h1>PADE TITLE</h1>
+        <p>Hi DEAR in side div</p>
+        <p class="special">Hi DEAR in side div</p>
+    </div>
+    <div>
+        <p>Hi DEAR out side div</p>
+    </div>  
+</body>
+
+/* Nesting>> الهدف منوا انوا تمنع تداخل الفقرات والديفات والاوانهم مع بعض */
+
+/* div .special{
+    
+    background-color: #EEE;
+    color: blueviolet;
+
+}  */
+
+/* هيعطي الالوان لكل اشي جوات ال div */
+/* div  {
+    background-color: #EEE;
+    color: blueviolet;
+
+}  */
+
+/***************/
+/*dimention width - and hight*/
+<body> 
+    <div >mohammed</div>
+    <hr>
+    <div>mohammed hazem</div>
+    <hr>
+    <div>mohammed hazem hassen</div>
+    <hr>
+    <div>mohammed hazem hassen abu raida</div>
+</body>
+
+div {
+    background-color: goldenrod;
+    padding: 10px;
+    display: inline-block;
+    /* width: 200px; */
+    /* max-width: 400px;
+    min-width: 400px; */
+/*     
+    min-width: 400px;
+    max-width: 400px;
+    height: 40px;
+    max-height: 100px; */
+    /* width: fit-content;>بتعطيك هان العرض بالزبط على مقاس النص  */
+    width: fit-content; 
+}
+/*******************/
+<body> 
+    <div>
+        https://www.youtube.com/watch?v=FQLRSbVdk28&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=16
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Quisquam recusandae, molestias laudantium dolorum voluptatem
+        aspernatur sunt nam impedit possimus perspiciatis ratione minus, hic,
+        voluptatum vel libero. Eum commodi voluptate error?</div>
+</body>
+
+/* overflow: overflow-x: & overflow-y: */
+div {
+    background-color: #EEE;
+    padding: 20px;
+    margin: 2px auto ;
+    height: 150px;
+    width: 150px;
+    border-radius: 2px; /* بلعب في حواف البوردر او الازرار */
+
+    /* overflow: بتحكم فالنص يمين شمال وظاهر ومخفي حسب البوكس المخصص لنص والنص الي برا المحتوى */
+    overflow: scroll;
+    /* 
+    overflow: hidden;
+    overflow: auto;
+    overflow: visible;
+    overflow-y: hidden;
+    overflow-x: hidden; 
+    overflow-x:hidden;*/
+}
+/******/
+<body> 
+    <div class="one">Titel page</div>
+</body>
+
+/*  text-shadow: 0px 1px 1px greenyellow;
+بنعمل ظل للنص  */
+
+.one  {
+    background-color: #EEE;
+    margin: 2px;
+    padding: 2px;
+    text-shadow: 0px 1px 1px greenyellow;
+    border: 1px;
+    /* text-align: center; *//*بتحكم فالنص شمال يمين  وسط*/
+    border-bottom: 1px solid brown;
+    /* width: fit-content; */
+    
+}
+
+<body> 
+    <div class="assign-1-shape-1">Normal Div</div>
+    <div class="assign-1-shape-2">Normal Div</div>
+    <div class="assign-1-shape-3">Normal Div</div>
+    <hr>
+    <div class="one">
+        <p>shape1</p>
+        <p>shape1</p>
+        <p>shape1</p>
+    </div>
+</body>
+
+
+.assign-1-shape-1{
+
+    background-color: blueviolet;
+    padding: 20px;
+    width: 500px;
+    color: white;
+    /* color: #8a2be2; */
+    /* color: hsl(271, 76%, 53%); */
+    /* color: hwb(271 17% 11%); */
+    margin: 5px;
+}
+
+.assign-1-shape-2 {
+    background-color: rgb(138, 44, 226, 0.64);
+    color: white;
+    padding: 20px;
+    width: 500px;
+    margin: 5px;
+}
+
+.assign-1-shape-3 {
+    background-color: rgb(138, 44, 226, 0.4);
+    color: white;
+    padding: 20px;
+    width: 500px;
+    margin: 5px;
+}
+
+/* ********** */
+.one{
+    width: 400px;
+    height: 400px;
+    background-image: url(../Css/css-assignment-5-8.png);
+    
+    color: brown;
+    font-weight: bold;
+    background-color: #eee;
+    /* في Shape 1 قم بجعل الخلفية لا تتكرر نهائيا
+    background-repeat: no-repeat;*/
+    /*  في Shape 2 قم بجعل الخلفية تتكرر طوليا فقط
+    background-repeat-y: repeat;*/
+    /* في Shape 3 قم بجعل الخلفية تتكرر عرضيا فقط
+        background-repeat-x: repeat;
+    */
+    /* في Shape 2 قم بجعل الخلفية تتكرر طوليا فقط ومكانها يكون ناحية اليمين
+    background-repeat-x: no-repeat;
+    background-image: url(../Css/css-assignment-5-8.png);
+    background-position: right; */
+    /* في Shape 3 قم بجعل الخلفية تتكرر عرضيا فقط ومكانها يكون ناحية الأسفل
+    background-repeat-y: no-repeat;
+    background-position: bottom; */
+    /*في Shape 4 قم بجعل الخلفية تتكرر طوليا وعرضيا
+    background-image: url(../Css/css-assignment-5-8.png);
+    background-repeat: repeat;*/
+
+}
+/* *******text alig
+nment******* */
+<body> 
+    <div>Titel <img src="https://via.placeholder.com/30" alt="loading..">page.!</div>
+</body>
+
+div {
+    background-color: #EEE;
+    padding: 2px;
+    margin: 1px;
+    /* border-bottom:1px solid rgb(244, 1, 1);
+    border-radius: 6px;
+    /* التحكم فالنص يمين شمال فالنص  */
+    /* text-align: left; */ 
+    /* بتحكم فالصفحة عربي او انجليزي ltr or rtl */
+    direction: ltr;
+    /* direction: rtl; */
+    /* بدنا نحط صورة مع النص ونتحكم فيها bottom */
+    vertical-align: middle ;
+    text-align: center ;
+}
+
+/****************/
+/* Text - Decoration>> 
+بنستخدموا عشان نزين النص ونشيل منوا الخطوط  ونحطلوا خطوا زي مثلا فالروابط  الخارجية */
+/* Text - Transform >> */
+<body> 
+    <div class="one">mohammed</div>
+    <a href="#">Google </a>
+</body>
+
+.div {
+
+    background-color: #EEE;
+    padding: 1px;
+    margin: 1px;
+    border-block: 2px;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: underline;
+    
+    background: #eee;
+    padding: 2px;
+    margin: 2px;
+    /* بتعمل الحواف على شكل زر  */
+    display: inline-block;
+    border-radius: 2px;
+
+    background: #eee;
+    padding: 2px;
+    margin: 2px;
+    display: inline-block;
+    border-radius: 2px;
+    /* بتمسح الخطوط  من تحت الراوبط*/
+    text-decoration: none;
+    color: red;
+}
+
+
+.one{
+    background-color: #EEE;
+    /* بتحكم فالكلام من جوات ملف الhtml كابتل او سمول او حرف كابتل ... */
+    text-transform: uppercase;
+}
+/**********/
+/*********************/
+/* Text - Overflow And Use Cases */
+<body> 
+    <div>
+        <p title="welcome to elzero web  school in web site">welcome to elzero web  school in web site </p>
+    </div>
+    
+</body>
+
+p {
+    background-color: #EEE;
+    padding: 1px;
+    border: 2px solid #9e9e9e;
+    width: 200px;
+    white-space: nowrap;
+    /* بتخفي النص لزيادة */
+    overflow: hidden;
+    /* بتقص النص لزيادة  */
+    text-overflow: ellipsis;
+}
+/**************/
+
+/* #22 - Inheritance */
+<body> 
+    <div>
+        <h3>alzero web school</h3>
+        <div class="one">
+            <p>welcome in your website</p>
+        </div>
+    </div>
+</body>
+
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+div {
+    background-color: #eee;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    
+
+.one {
+    border: 2px soild ;
+    border-color: inherit;
+    padding: inherit;
+}
+
+/******/
+<body>
+    <div>
+    <p>This Is Paragraph</p>
+    </div>
+</body>
+/*---الدروس من رقم 22 إلى رقم 26 تكليف 1---*/
+div {
+    text-align: center;
+    font-size: 21px;
+    font-family: sans-serif;
+    border: 3px solid;
+    border-color: blueviolet;
+    padding: 25px;
+}
+p {
+
+    border: inherit;
+    margin: 4px;
+    padding: 27px;
+    background-color: #EEE;
+}
+/*******تكليف 2********/
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+</head> 
+<body>
+    <div>
+    <p class="one">Elzero Web School</p>
+    <p class="two">Elzero Web School</p>
+    <p class="three">Elzero Web School</p>
+
+    </div>
+</body>
+
+body {
+    text-align: center;
+}
+div .one {
+    font-family: 'Open Sans', sans-serif;
+    background-color: burlywood;
+}
+div .two {
+
+    background-color: aquamarine;
+    font-family: 'Cairo', sans-serif;
+}
+div .three {
+    font-family: 'Jomhuria', cursive;
+    background-color: thistle;
+}
+/***************/
+/* 
+#*** font size and css unit***#
+<body> 
+    <div>
+        welcome in your <span>website</span> 
+    </div>
+</body>
+
+/************/
+/* التكليف 03 */
+/* font size  defult  in web is 16px */
+<html lang="en" 
+    style="
+    font-size: 20px;"
+    /* font-size: 16px;*/>
+
+<body>
+    <div>
+    <p class="one">Elzero Web School</p>
+    <p class="two">Elzero Web School</p>
+    <p class="three">Alzero Web School</p>
+    </div>
+</body>    
+body {
+    text-align: center;
+    background-color: #eee;
+}
+.one {
+    font-size: 2.5rem; /* ==font-size: 50px; نفسوا بس بال rem*/
+}
+.two {
+    
+    font-size: 2rem;/* ==font-size: 40px; نفسوا بس بال rem*/
+}
+.three {
+    font-size: 2rem;/* ==font-size: 30px; نفسوا بس بال rem*/
+}
+/**********-/ 
+css unit =
+1- Px > الوحدة اليناميكي
+2- em > time
+3- vw > root time مهمة جدا في عالم الresponsive!! بتتمدد حسب ابعاد الصفحة تلقائيا!
+4- precentage %
+
+-Read
+-vmin
+-vh
+
+
+vw > root time كيف بتشتغل ؟؟! 
+فرضا كان ابعاد الصفحة 
+900px x617px فهان كل 
+1vw =9% من ابعاد الصفحة
+يعني 
+
+vw5 =5*9 =45%
+*/
+
+div {
+    font-size: 20px;
+}
+
+div span {
+    font-size: 2vw;
+}
+
+/************/
+/* #26 - Mouse Cursor */
+
+/* بتخلي النص  الي فصفحة الويب يكون حسب ما بدك cursor*/
+<body> 
+
+    <a href="#">Googel</a>
+    <span>Test</span>
+    <button>Clik</button>
+    
+    <hr />
+    <p class="one"> Test P</p>
+    <p class="Two"> Test P</p>
+    <p class="Three"> Test P</p>
+</body>
+
+body {
+    background: none;
+    border: none;
+    color: #4caf50;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+} 
+/************تكليفات CSS الدروس من 09 إلى 12***************/
+<body> 
+    <div class="one">shape1</div>
+    <div class="two">shape2</div>
+    <div class="three">shape3</div>
+</body>
+.one {
+    /* عرض العناصر جنب بعض */
+    display: inline-block;
+    background-color: #eee;
+    padding: 20px;
+    margin: 5px;
+    border: 5px #fe0000 solid;
+    outline-style: solid;
+    
+    
+}    
+
+.two {
+    display: inline-block;
+    background-color: #eee;
+    padding: 20px;
+    margin: 5px;
+    border: 5px solid;
+    border-color: blue green;
+    outline-style: solid;
+}
+
+.three {
+    background: #eee;
+    color: black;
+    padding: 20px;
+    display: inline-block;
+    margin: 5px;
+    border: 5px dashed;
+    border-color: blue green yellow red
+    outline-style: solid;
+}
+
+/* التكليف 02 */
+
+<body> 
+    <div class="one"><span>-</span> ThisIs Important Note-1</div>
+    <div class="two"><span>-</span>This Is Important Note-2</div>
+    <div class="three"><span>-</span>This Is Important Note-3</div>
+</body>
+
+.one,
+.two,
+.three {
+    padding-block: 20px;
+    width: 400px;
+    padding: 24px;
+    margin-block: 15px;
+}
+
+.one {
+    background-color: #EEE;
+    font-family: sans-serif;
+}
+.one span {
+    background-color: #ff2372;
+    height: 10px;
+    width: 40px;
+    padding-block: 15px;
+}
+.two {
+    background-color: #EEE;
+    font-family: sans-serif;
+    visibility: hidden;
+}
+.two span {
+    background-color: #0cf378;
+    height: 10px;
+    width: 40px;
+    padding-block: 15px;
+}
+.three {
+    background-color: #EEE;
+    font-family: sans-serif;
+}
+.three span {
+    background-color: #23aeff;
+    height: 10px;
+    width: 40px;
+    padding-block: 15px;
+}
+
+
+/* الدروس من رقم 13 إلى رقم 16 */
+<body> 
+    <div class="parent">
+    <div class="child">This Is Child <span class="title">Title</span></div>
+    <span class="title">Child Title</span>
+    <p>Paragraph Content</p>
+</div>
+<div class="title">Section Title</div>
+</body>
+
+.parent .child .title {
+    background-color: brown;
+}
+.parent .title  {
+    background-color: blue;
+} 
+
+p {
+    background-color: green;
+}
+
+.title {
+    background-color: green;
+}
+/*جمع مع بعض */
+p ,
+.title 
+{
+    background-color: green;
+}
+
+
+/* الدروس من رقم 17 -21 */
+<body> 
+    <div class="one">Title One</div>
+    <div class="two">Title Two With More Words</div>
+    <div class="three">Title Three With More More More Words</div>
+    <div class="four">
+        Title Three With More More More Words Title
+        Three With More More More Words
+        Title Three With More More More Words
+        Title Three With More More More Words
+        Title Three With More More More Words
+        Title Three With More More More Words
+        Title Three With More More More Words
+        Title Three With More More More Words
+    </div>
+</body>
+
+.one {
+    background-color: crimson;
+    display: block;
+    width: fit-content;
+    padding-block: 15px;
+    padding: 15px;
+    display: block;
+    margin-block: 20px;
+    color: white;
+    font-family: sans-serif;
+    
+}
+.two {
+    background-color: crimson;
+    display: block;
+    width: fit-content;
+    padding-block: 15px;
+    padding: 15px;
+    display: block;
+    margin-block: 20px;
+    color: white;
+    font-family: sans-serif;
+
+}
+.three {
+    background-color: crimson;
+    width: fit-content;
+    padding-block: 15px;
+    padding: 15px ;
+    margin-block: 15px;
+    display: block;
+    color: white;
+    font-family: sans-serif;
+}
+.four {
+    background-color: crimson;
+    max-width: 400px;
+    max-height: 100px;
+    padding-block: 15px;
+    padding: 15px ;
+    margin-block: 15px;
+    display: block;
+    color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+    height: 200px;
+    width: 400px;
+}
+/*************/
+/* # Float and clear lect: 27 */
+
+<body>
+    <div class="parent">
+        <div> product one </div>
+        <div> product two </div>
+        <div> product three </div>
+        <div> product four </div>
+        <p class="clear"></p>
+    </div>
+    
+    <p>this p for testing float</p>
+</body>
+
+.parent {
+    background-color: #eee;
+    padding: 10px ;
+}
+
+.parent div {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #1e92f7;
+    float: left;/* بتخلي العنصر عائم فالصفحة*/
+    width: 25%; /* full width 100%  and 4 elements =25% */
+}
+/* عشان نخلي السطر يتداخل مع الي قبلوا */
+.clear {
+    clear: both;
+}
+/*********/
+<body>
+        <div > product one </div>
+        <div class="parent"><div class="two"> product two </div></div>
+</body>
+
+/* float , opacity >> العومان والشفافية */
+/* postions :- بتحرك العنصر وين ما بدك 
+
+1- static = default value ما بتأثر باي حركة  خارجية
+2- reletive =نسبي => بتحرك العنصي بالنسة لنفسوا ,يعني بتأثر باي حركة من فوق ومن تحت ومن اي مكان  بالنسبة 
+3- absolute
+4-fixed = افضل استخداماتوا هوا الزر الي بكون فاسفل الشاعة وبطلعك لاولها 
+
+The position CSS property sets how an element is positioned in a document.
+The top, right, bottom, and left properties 
+determine the final location of positioned elements.
+
+Syntax: static | relative | absolute | sticky | fixed
+*/
+body {
+    margin: 0;
+    background-color: #eee;
+    /* عشان نعمل سكرول لصفحة وتطلع كبيرة */
+    height: 5000px; 
+}
+
+
+.two {
+    background-color: rgb(79, 43, 115 ,0.5); 
+    /* opacity :  بتعمل شفافية لبلوك كامل */
+    opacity: 0.9;
+    position: absolute;
+    top: 92px;
+    left: 86px;
+    height: fit-content;
+    width: fit-content;
+    opacity: 0.9;
+    right: 0;
+    bottom: 0;
+}
+.one {
+    position: fixed;
+}
+.parent {
+    background-color: rgb(39, 158, 158);
+    height: 200px;
+    width: 300px;
+    position: relative;
+
+}
+
+div {
+    background-color: rgb(132, 77, 126);
+    text-align: center;
+    float: left;
+    width: calc((100% - 90px)/5);
+    padding-bottom: 10px;
+    padding-top: 12px;
+    margin-left: 15px; /* الهوامش بين كل عنصر والي جنبوا* /
+    
+}
+
+/*  if # margin-left: 1px <>and<> 5 spaces (4elementes)
+
+full width =100% 
+5 space * 1px= 5px from full width
+100% -5px = 95px available from full width
+4 elements => 95px / 4 => (23.75 / elements)
+*/
+
+/*  if # margin-left: 15px <>and<> 6spaces (5elementes)
+
+full width =100% 
+6 space * 15px=> 90px from full width
+100% -90px => 10px available from full width
+6 elements  => ((100% -90px)/5)
+*/
+/***********/
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Magni beatae laudantium qui ea doloribus,
+        quam natus unde incidunt iure neque, delectus id, 
+        voluptate eos omnis laborum ab cumque repellendus quia.
+    </p>
+    <div>sticky scroll</div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Magni beatae laudantium qui ea doloribus,
+        quam natus unde incidunt iure neque, delectus id, 
+        voluptate eos omnis laborum ab cumque repellendus quia.
+    </p>
+
+/* stiky scroll >> بكون فيه مثلا روابط مهمة ولازم تبقى قدام المستخدم وايش ما تحرك بالصفحة بتضل ثابتة  */
+body {
+     heigth ="1000px"
+     }
+
+div {
+    
+    background-color: rgb(222, 131, 13);
+    padding: 5px;
+    position: sticky;
+    /* عشان تبقى معلقة باعلى الصفحة وما تروح لبعيد */
+    top: 0;
+
+}
+/***********************/
+
+/* #31 - Z-Index >>برتب الطبقات حسب الاهمية مثلا  *
+/* list style= "none" >>بتشيل النقطة الي جنب العناصر الي غير مرتبة*/
+/<body>
+    <div class="One">One</div>
+    <div class="Two">Two</div>
+    <div class="Three">Three</div>
+
+</body>
+
+div {
+    padding: 10px;
+    background: #eee;
+    text-align: center;
+    width: 100px;
+    position: absolute;
+}
+.One {
+    background: rebeccapurple;
+    left: 26px;
+    top: 20px;
+    z-index: 10;
+}
+
+.Two {
+    background: #a16216;
+    left: 17px;
+    top: 14px;
+}
+.Three {
+    background: burlywood;
+}
+
+/***********************/
+/********************************/
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Email</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>moha</td>
+                <td class="age">22</td>
+                <td>moh@m.mo</td>
+            </tr>
+            <tr>
+                <td>rami</td>
+                <td class="age">2</td>
+                <td>moh@m.mo</td>
+            </tr>
+            <tr>
+                <td>sama</td>
+                <td class="age">20</td>
+                <td>moh@m.mo</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    width: 100%;
+    /* border: 1px solid #eee; */
+    border-spacing: 1px;
+}
+table td {
+    background-color: bisque;
+    padding: 10px;
+    border-spacing: 1px;
+    /* border: px solid #eee; */
+}
+table thead td {
+    background-color: brown;
+    text-align: center;
+    font-weight: bold;
+}
+table tbody .age {
+    text-align: center;
+    font-weight: bold;
+}
+/********************************/
+/* pseudo classes >> الكلاسات المزيفة فخامة يكير */
+<body>
+    <div class="element">Normail Element</div>
+    <hr>
+    <img src="http://via.placeholder.com/80" alt="Loading...">
+    <hr>
+    <a href=https://www.google.com>Link1</a>
+    <a href="https://www.facebook.com">Link1</a>
+    <a href="https://www.kaggel.com">Link3</a>
+    <hr>
+    <form action="">
+        <div class="text"><input type="text"></div>
+        <div>
+            <input class="ch" id="checkbox" type="checkbox">
+            <label for="checkbox">Testing box</label>
+        </div>
+    </form>
+</body>
+
+.element {
+    background-color: blueviolet;
+    color: white;
+}
+/* بتغير لون  الينكات وبتشيل الخط  من تحتيه */
+a { 
+    color: green;
+    text-decoration: none;
+}
+/* لما تحط  الكارسور على العنصر بغير لونوا مؤقت */
+a:hover {
+    color: blue;
+}
+a:visited {
+    color: brown;
+}
+/* بيخفي العنصر لما تعمل تشيك عليه */
+.ch:checked  {
+    display: none;
+}
+.text:focus {
+    border-color: rgb(60, 159, 139);
+    outline: none
+}
+/**************************/
+/******************/
+<body>
+    <div class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo provident tenetur nesciunt culpa 
+        molestias dicta quia tempore asperiores aliquam, 
+        expedita animi autem ullam similique, recusandae labore mollitia pariatur cum. Quo?
+    </div>
+    <hr>
+    <div class="two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo provident tenetur nesciunt culpa 
+        molestias dicta quia tempore asperiores aliquam, 
+        expedita animi autem ullam similique, recusandae labore mollitia pariatur cum. Quo?
+    </div>
+    <hr>
+    <div class="three">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo provident tenetur nesciunt culpa 
+        molestias dicta quia tempore asperiores aliquam, 
+        expedita animi autem ullam similique, recusandae labore mollitia pariatur cum. Quo?
+    </div>
+</body>
+/* 
+pseudo class (:)الكلاس المزيف
+pseudo elements (::) العنصر المزيف
+*/
+/* : :: >>  ::حطيناهم عشان نفرق بين العنصر: وبين الكلاس 
+حطيت واحد : ولا إتنين عادي هيشتغلن */
+
+/* هان حرف واحد  او عنصر بتحكم فيه وبغير فخصائصوا */
+.one:first-letter {
+    color: blueviolet;
+    background-color: black;
+    font-size: 60px;
+}
+/*::first-line >>اول سطر من الفقرة   */
+.two::first-line {
+    color: rgb(179, 51, 130);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+/* ::selection >> بتختار عنصر او اسطر من فقرة على شكل مميز ولون مميز مخصوص */
+.three::selection {
+    color: greenyellow;
+    background-color: black;
+}
+/********* Pseudo Elements - Before, After, Content*********/
+<body>
+    <div class="perant">
+        <div class="litter">M</div>
+        <div class="paragraph" data-text="&#167;العناصر مهمة جدا">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusamus, 
+            quod necessitatibus eum quo magnam voluptas natus iusto ad voluptatum? Esse,
+            perspiciatis totam reprehenderit cupiditate neque veritatis at assumenda repellendus.
+        </div>
+    </div>
+    <div class="perant">
+        <div class="litter">R</div>
+        <div class="paragraph" data-text="&#167;العناصر مهمة جدا">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusamus, 
+            quod necessitatibus eum quo magnam voluptas natus iusto ad voluptatum? Esse,
+            perspiciatis totam reprehenderit cupiditate neque veritatis at assumenda repellendus.
+        </div>
+    </div>
+    <div class="perant">
+        <div class="litter">O</div>
+        <div class="paragraph"data-text="&#167;العناصر مهمة جدا">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusamus, 
+            quod necessitatibus eum quo magnam voluptas natus iusto ad voluptatum? Esse,
+            perspiciatis totam reprehenderit cupiditate neque veritatis at assumenda repellendus.
+        </div>
+    </div>
+    <hr>
+    <ul>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+</body>
+
+/* #36 - Pseudo Elements - Before, After, Content مهم  جدا جدا الدرس  */
+.perant {
+    margin-bottom: 20px;
+    /*    بتخفي بين الفقرات والنصوص  */
+    overflow: hidden; 
+    /* العداد.. بنسميه زي ما بدنا */
+    counter-increment: counter_inc;
+}
+.litter {
+    
+    background-color: royalblue;
+    position: relative;
+    float: left;
+    padding: 17px;
+    height: 50px;
+    width: 50.5px;
+    text-align: center;
+    font-size: 50px;
+    margin-right: 20px;
+
+}
+.paragraph {
+    background-color: #eee;
+    float: left;
+    position: relative;
+    width: 600px;
+    padding: 10px;
+
+}
+
+/* عشان  نعمل بار ويكون مخفي فالكود   */
+/*content: ""; >>لازم الكونتنت تكون  موجودة عشان تشتغل االافتر after  */
+/* 
+.paragraph::after {
+    
+    content: "";
+    background: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 115px;
+    width: 8px;
+} */
+
+/* بدنا نعمل عداد فاخر المحتوى  */
+/* .paragraph::after {
+    content: counter(counter_inc);
+    background: rgb(61, 53, 100);
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    height: 27px;
+    width: 8px;
+    color: white;
+    margin: -22px;
+    width: 30px;
+    text-align: center;
+} */
+/**********************************/
+/* هان بنخفي العنصر ومجرد ما تعمل هوفر الو بيضهر  */
+/* <div class="paragraph" data-text="&#167; العناصر مهمة جدا"> */
+/* attr() >> attrebueits*/
+.paragraph::after {
+    content: attr( data-text);
+    display: none;
+}
+.paragraph:hover::after {
+    display: block;
+}
+/**********************************/
+.paragraph::before {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    height: 0;
+    left: -35px;
+    width: 0;
+    margin-top: -10px;
+    top: 50%;
+    border-width: 16px;
+    border-style: solid;;
+    /* transparent >>بتخلي اللون شفاف */
+    /* اصلها زي هيك..border-color: red green blue black; */
+    border-color: transparent green transparent  transparent
+}
+.paragraph::selection {
+    color: black;
+    color: red;
+}
+
+ul {
+    list-style: none;
+}
+ul li { 
+    position: relative;
+    padding-left: 10px;
+    margin-bottom:15px ;
+}
+ul li:before { 
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    height: 0;
+    left: -35px;
+    width: 0;
+    margin-top: -10px;
+    top: 50%;
+    border-width: 16px;
+    border-style: solid;
+    border-color: transparent green transparent transparent;
+
+}
+/******border raduies  تعمل دائرة او  اطارات خلفيات وغيرها /**/
+<body>
+    <div></div>
+</body>
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: #eee;
+    border-radius: 50%px;
+    /********
+    border-top-left-radius: 17px 12px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 7px;
+}
+/*******#40-Box Shadow And Examples******/
+<body>
+    <div>Element</div>
+ </body>
+div {
+  padding: 20px;
+  background-color: #eee;
+  margin: 20px auto;
+  width: 300px;
+  box-shadow:
+    0 0 10px 0 #F10000,
+    0 0 10px 0 #000,
+    0 0 10px 0 #080,
+    0 0 10px 0 #00f,
+    0 0 10px 0 yellow;
+}
+/**********************************/
+.paragraph::before {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    height: 0;
+    left: -35px;
+    width: 0;
+    margin-top: -10px;
+    top: 50%;
+    border-width: 16px;
+    border-style: solid;;
+    /* transparent >>بتخلي اللون شفاف */
+    /* اصلها زي هيك..border-color: red green blue black; */
+    border-color: transparent green transparent  transparent
+}
+.paragraph::selection {
+    color: black;
+    color: red;
+}
+
+ul {
+    list-style: none;
+}
+ul li { 
+    position: relative;
+    padding-left: 10px;
+    margin-bottom:15px ;
+}
+ul li:before { 
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    height: 0;
+    left: -35px;
+    width: 0;
+    margin-top: -10px;
+    top: 50%;
+    border-width: 16px;
+    border-style: solid;
+    border-color: transparent green transparent transparent;
+
+}
+/******border raduies  تعمل دائرة او  اطارات خلفيات وغيرها /**/
+<body>
+    <div></div>
+</body>
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: #eee;
+    border-radius: 50%px;
+    /********
+    border-top-left-radius: 17px 12px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 7px;
+}
+/*
+ 40-Box Shadow And Examples
+ box-shadow: >>> H-shadow افقي , V-Shadow عمودي, blur شفافية,spread الانتشار, color,inset داخلي وخارجي
+*/
+<body>
+    <div>Element</div>
+ </body>
+div {
+  padding: 20px;
+  background-color: #eee;
+  margin: 20px auto;
+  width: 300px;
+  box-shadow:
+    0 0 10px 0 #F10000,
+    0 0 10px 0 #000,
+    0 0 10px 0 #080,
+    0 0 10px 0 #00f,
+    0 0 10px 0 yellow;
+}
+/* الدروس من رقم 34 إلى رقم 37 
+تكليف1 */
+<body>
+    <div>One</div>
+    <div style="background-color: red;"></div>
+    <div>Three</div>
+</body>
+div {
+    background-color: #eee;
+    text-align: center;
+    height: 60px;
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px auto;
+    /* بتوسط الكلام الديف فنص الصفحة  */
+    
+    
+}
+
+
+/*****************
+
+/* تكليفات CSS الدروس من 34 إلى 37
+التكليف 02 */
+
+<body>
+    <div>1 Hello, Welcome To Elzero Web School</div>
+</body>
+
+div {
+    background-color: hwb(0deg 73% 27% / 84%);
+    padding: 20px;
+    height: 20px;
+    width: 300px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+div::first-letter {
+    content: "";
+    position: absolute;
+    padding: 10px;
+    background-color: red;
+    left: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -85px;
+    color: white;
+}
+
+/* /التكليف 03 */
+<body>
+    <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+    <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+    <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+</body>
+
+p {
+    background-color: rgb(238, 238, 238);
+    padding: 10px;
+    margin-block: 15px;
+    margin-inline: 104px;
+    width: 316px;
+    border-left-width: 5px;
+    border-left-style: solid;  
+    border-left-color: red;
+
+
+}
+/* الاسماء خارج parg using attrbuitet */
+p::before {
+    content: attr(data-person);
+    background-color: #eee;
+    position: absolute;
+    padding: 4px;
+    left: 43px;
+    height: 21px;
+    width: 50px;
+    margin: -5px;
+    text-align: center;
+}
+p::after {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    border: 11px solid;
+    border-color: transparent red transparent transparent;
+    left: 90px;
+    
+}
+
+/* التكليف 04 */
+<body>
+    <p>This Is Very Very Long Product Title</p>
+    <p>This Is Very Very Long Product Title</p>
+    <p>This Is Very Very Long Product Title</p>
+    <p>This Is Very Very Long Product Title</p>
+    <p>This Is Very Very Long Product Title</p>
+    <p>This Is Very Very Long Product Title</p>
+</body>
+
+p {
+    background-color: #eee;
+    padding: 10px;
+    margin: 10px;
+    height: 16px;
+    width: 350px;
+    text-align: center;
+    counter-increment: counter-inc;
+}
+/* counter cube  مريع جواتوا كاونتر*/
+p::before {
+    content: counter(counter-inc);
+    background-color: red;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    margin-left: -67px;
+    margin-top: -10px;
+    padding: 5px;
+}
+/* bar */
+p::after {
+    content: "";
+    background-color: red;
+    position: absolute;
+    margin-left: 63px;
+    height: 36px;
+    width: 4px;
+    margin-block: -10px;
+}
+
+
+
+
+/* التكليف 01الدروس من رقم 38 إلى رقم 41 من */
+<body>
+    <div>Element</div>
+    <div>Element</div>
+    <div>Element</div>
+</body>
+div {
+    background-color: #eee;
+    width: 100px;
+    height: 100px;
+    /* padding: 10px; */
+    border-radius: 100px;
+    border: solid;
+    border-width: 3px;
+    padding: 27px;
+    /* بتسفط العناصر نظام بلوكات جنب بعض  */
+    display: inline-block;
+    counter-increment: counter-inc;
+    margin-top: 23px;
+    margin-left: 20px;
+    font-size: 30px;
+    /* h shadow ,v shadow ,blur, spred ,color */
+    box-shadow: 
+    8px 10px 0 0 rebeccapurple,
+    -8px -10px 0px 0 rgb(173 36 150)
+    
+}
+div::before {
+    content: counter(counter-inc);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    position: absolute;
+    width: 19px;
+    height: 18px;
+    margin-left: 43px;
+    margin-top: -34px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* التكليف 02 */
+<body>
+    <div></div>
+</body>
+
+div {
+    background-color: #eee;
+    height: 100px;
+    width: 100px;
+    box-shadow: inset 0 0 10px 2px #3d484d;
+    border-radius: 64px;
+    border-top-left-radius: 89px 23px;
+    border-bottom-right-radius: 51px 15px;
+    border-top-right-radius: 108px;
+    border-bottom-left-radius: 100px;
+}
+
+/* التكليف 03  مليان افكار وروعة الحمد اللله */
+<body>
+    <div class="Basic">
+        <div class="parg">
+            Basic
+        </div>
+        <div class="salary">Free</div>
+
+    </div>
+    <div class="bar-OR"><p>or</p></div>
+    <div class="Pro">
+        <div class="parg">
+            Pro
+        </div>
+        <div class="salary">30$</div>
+    </div>
+</body>
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.Basic ,
+.Pro
+{
+    background-color: #eee;
+    width: 190px;
+    height: 237px;
+    display: inline-block;
+    margin-inline: 20px;
+}
+.parg {
+    text-align: center;
+    background-color: hwb(209 4% 8% / 0.722);
+    color: white;
+    border-radius: 5px;
+    padding-block: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.salary {
+    background-color: #b5b5b573;
+    text-align: center;
+    height: 150px;
+    width: 150px;
+    padding-block: 55px;
+    display: inline-block;
+    margin-left: 21px;
+    border-radius: 75px;
+    font-size: 32px;
+
+}
+.bar-OR {
+    background-color: #499dec;
+    display: inline-block;
+    height: 237px;
+    width: 2px;
+    
+}
+.bar-OR p{
+    height: 20px;
+    width: 20px;
+    background: #2488e6;
+    color: #ffffff;
+    border-radius: 25px;
+    text-align: center;
+    margin-left: -10px;
+    margin-top: 143px;
+    }
+/* **************************************************************** */
+/* Transtion الانتقال وخصائصه */
+
+<body>
+    <div class="one">One</div>
+</body> 
+
+.one {
+    background-color: #eee;
+    height: 100px;
+    width: 280px;
+    /* المدة الي بدوا يستغرقوا للانتقال من حالة 1 لحالة 2  */
+    transition-duration: 0.1s;
+    /*  مدة او وقت  التأخير الي هيسغرقوا قبل الانتقال
+    يعني بستنى قبل الانتقال نص ثانية وبعد الانتقال نص تانية ليرجع 
+      */
+    transition-delay: 0.2s;
+    /* <<بتعامل مع الخصائص وبنقلهم مع بعض*الخصاءص الي بنعمل عليهم انتقال /
+    transition-property: width,height;
+    /*  وقت انتقال الخاصية هل يبدا ضعيف وينتهي ظعيف ولا العكس وغيرها ؟؟؟*/شكل الانتقال كيف
+    transition-timing-function: ease-in;
+
+    transition-property: all; 
+    /* الخاصية الي هنطبق عليها الانتقال هل هتنتقل كلها ام عرض طول وغيرها
+    /*Shorthand property combines four of the transition properties into a single property. 
+    /* >>> Shorthand property */
+    transition: width 0.5s ease-in 0.3s;   
+        /*
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+        transition-delay: 0.3s;
+        */
+
+.one:hover {
+    width: 200px;
+    height:140px;
+}
+
+/* Important Declaration And Use Cases >>
+ما بتلزمك  فالعادة الا لما تكمل ورا شغل ناس لان بكون فش اكسيز لملفات الcss */
+
+<body>
+    <div class="one" style="background-color: red;">One</div>
+</body>
+
+.one {
+  background-color: #EEE !important;
+}
+
+
+
+/* The Margin Collapse */
+
+<body>
+    <div class="parent">
+        <div class="one"></div>
+        <div class="two">
+            <div class="up"></div>
+            <div class="down"></div>
+        </div>
+    </div>
+</body>
+
+  /*
+  The Margin Collapse بتعمل كونتاكت  بين المارجن  العمودي
+  [1] Only Vertical Margin Collapse
+  [2] Bigger Margin Wins
+  [3] Margin Collapsing With Elements Without Anything Between
+  [4] Nesting Does Not Prevent Collapse
+*/
+.parent {
+  overflow: hidden;
+  /*  بتوسط الشكل بنص الشاشة في طريقة اسهل من خلال الflex*/
+  margin: auto;
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  background-color: #eee;
+}
+.parent .one,
+.parent .two {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.one {
+    background-color: #ddd;
+}
+.two {
+    background-color: #aaa;
+}
+/*  والكلاس اب يورث المارجن بوتوم من كلاس داون  وبشرط لازم  يكون كبير*/
+.up {
+    background-color: red;
+    color: white;
+    height: 80px;
+    margin-bottom: 40px;
+}
+.down {
+  background-color: green;
+  color: white;
+  height: 80px;
+  margin-top: 40px;
+}
+
+/*
+    CSS Variables
+    - Global Variable المتغيرات على مستوى الاسيستم  كلو 
+    - Local Variable على مستوى الكلاس بس " على الخيار الي انتا  حددتوا "
+    var(Variable Name, Fall Back Value)>>Fall Back Value.>> بتكون احتياط للون الرءيسي او الخاصية الرئيسية
+*/
+/* # دايما الفاريبل الي على مستوى السيستم بنستخدم  مع الروت*/
+
+/* global var >>متغيرات ع مستوى السيستم */
+:root {
+    --mainColor: blue; /* الاسم زي ما بدك*/
+    --mainPadding: 10px;
+}
+
+.main {
+    background-color: var(--mainColor, black);
+    color: white;
+    padding: calc(20px + var(--mainPadding));
+}
+h2 {
+    color: var(--mainColor);
+    background-color: #eee;
+    padding: var(--mainPadding);
+}
+p {
+    color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    padding: var(--mainPadding);
+}
+a:hover {
+    color: var(--mainColor);
+}
+
+/* class globle الكلاس على مستوى السليكت الي انتا بدك اياه  */
+.local {
+    --mainColor: black;
+    background-color: var(--mainColor);
+    color: white;
+}
+/* ************************ Flexible Box*********************** */
+
+<body>
+    <h3>Flex</h3>
+
+    <div class="flex">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+    </div>
+
+    <hr />
+
+    <h3>Float</h3>
+
+    <div class="float">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+    </div>
+</body>
+
+/*
+Flexible Box
+
+    /* Syntax: row | row-reverse | column | column-reverse */
+    flex-direction: ;
+    /* Syntax: row | row-reverse | column | column-reverse */
+    justify-content: ;
+    /* Syntax: normal | stretch | <baseline-position> | [ <overflow-position>? <self-position> ] */
+    align-items: ; توسيط العنصر 
+/*
+>>> For Parent <<< 0
+- display: flex => To Start Flexible Box
+- flex-direction: row => Default Value
+- flex-wrap: nowrap => Default Value
+
+>>shorthand flex syntacs
+- flex-flow: [Flex-Direction] + [Flex-Wrap]
+
+
+--justify-content: بتوزع عناصر المحتوى بطريقة عرضية اما فالنص او في اليمين او فالنهاية
+
+    flex-start; بوزع  العناصر او  المحتوى في اول البوكس 
+    flex-end;    المحتوى بكون  من ناحية اليمين 
+    center ; فالوسط 
+    space-between; بتحط  مسافات بين كل عنصر والتاني من القيمة الكلية للصندوق
+    فرضا عندي 3 عناصر وبدي مسافة بين كل عنصر والتاني مسافة 1بالمية ادن  100-2=98
+    calc (98% / 3 )=
+    وباستخدام السبيس بتوبين بطريقة ديناميكية بوسطلك اياها تلقائي
+    ; حول العنصر بنحط  مسافات 
+    فرضا بدنا مسافة بين كل عنصر وبعدوا على 4 عناصر فيعني عندك  6 فراغات 100-6=94
+    calc (94% / 3)=
+    space-evenly = [space-between;+space-around ]بتدمج  بين الخاصيتين
+    stretch == بتمدد طولايا
+    --------
+--align-items = بتعمل محاداة للعناصر طوليا/// بتوزع عناصر المحتوى بطريقة طوليا   اما فالنص او في اليمين او فالنهاية
+    align-items: stretch;>>>Default Value 
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* توسيط العناصر في وسط الصفحة عن طريق الفلكس وخصائصه */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+  /* Syntax: row | row-reverse | column | column-reverse */
+  flex-direction: ;
+  /* Syntax: row | row-reverse | column | column-reverse */
+  justify-content: ;
+  /* Syntax: normal | stretch | <baseline-position> | [ <overflow-position>? <self-position> ] */
+  align-items: ;
+}
+.float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.float div {
+  background-color: #f00;
+  color: white;
+  float: right;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+}
+
+<body>
+    <h3>Flex</h3>
+    <div class="flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+</body>
+
+/* background-size */
+
+/* Keyword values */
+background-size: cover; بتكون  الصورة مزومة وطالعة بوجهك  دغري 
+هان بحافظ على نسبة الصورة داخل الحاوية وبحاول يغطي 
+الاحاوية طوليا وعرضيا وفي حالة الصورة مش 
+زي ابعاد  الحاوية بقصر الصورة طوليا وعرضيا عشان تتنساسب مع  ابعاد  الحاوية 
+background-size: contain; 
+بخلي الصورة تستغل اكبر قدر ممكن  من الحاوية بدون  ما يقص الصورة 
+لا طوليا ولا  عرضيا وادا الحاوية اكبر من الصورة بقسم الصورة 
+ممكن  تلغي التقسيم برضوا بال no-repaet()
+
+/* One-value syntax */
+/* the width of the image (height becomes 'auto') */
+background-size: 50%;
+background-size: 3.2em;
+background-size: 12px;
+background-size: auto;
+
+/* Two-value syntax */
+/* first value: width of the image, second value: height */
+background-size: 50% auto;
+background-size: 3em 25%;
+background-size: auto 6px;
+background-size: auto auto;
+
+/* Multiple backgrounds */
+background-size: auto,
+auto;
+/* Not to be confused with `auto auto` */
+background-size: 50%,
+25%,
+25%;
+background-size: 6px,
+auto,
+contain;
+
+/* Global values */
+background-size: inherit;
+background-size: initial;
+background-size: revert;
+background-size: revert-layer;
+background-size: unset;
+/*
+
+
+Flexible Box
+
+For Parent
+- display: flex => To Start Flexible Box
+- flex-direction: row => Default Value
+- flex-wrap: nowrap => Default Value
+- flex-flow: [Flex-Direction] + [Flex-Wrap]
+- justify-content: flex-start => Default Value
+- align-items: stretch => Default Value
+- align-content: stretch => Default Value
+For Child
+- flex-grow: 0 => Default Value خاصية النمو 
+- flex-shrink: 1 => Default Value الانكماش
+- order: 0 => Default Value التريب للعناصر
+- عشان في عنصر جبنوا فلازم يكون inline-flex 
+display: inline-flex;
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 800px;
+  padding: 20px;
+  /* Syntax: [ <length> | <percentage> | auto ]{1,4} */
+  margin: 20px auto;
+  display: flex;
+
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+  flex-grow: 1;
+}
+
+
+
+
+/* الدروس من رقم 42 إلى رقم 45  */
+/* التكليف 01 */
+<div class="parant">
+        Will Go Up On hover in half second 
+        
+        <div class="child">
+            will go down after half second
+        </div>
+    </div>
+
+    
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.parant {
+
+    background-color: #eee;
+    width: 300px;
+    text-align: center;
+    height: 150px;
+    padding: 18px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-property: all
+    
+}
+.child {
+    background-color: #c8c4c4;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in;
+    /* transition: all 0.5s ease-in 0.3s; */
+}
+.child:hover {
+    margin: 20px;
+}
+.parant:hover {
+    margin-top: 20px;
+}
+
+
+/* التكليف 02
+تأكد أن جملة Hello Div تغيرت إلى Elzero ..>>ما زبطت في خلل*/
+
+<body>
+    <div style="
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border: 1px solid blue;
+    font-size: 80px;">
+    Hello Div
+</div>
+
+</body>
+div {
+    background-color: #eee !important;
+    color: black !important;
+    font-size: 20px !important;
+    width: 400px !important;
+    text-align: center !important;
+    border: none !important;
+
+}
+
+
+/* التكليف 03 */
+
+<body>
+    <div>Element</div>
+    <div>Element</div>
+    <div>Element</div>
+</body>
+
+/* :root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+} */
+
+div {
+    color: var(--mainColor ,red );
+    border: 2px solid var(--mainColor ,black);
+    padding: var(--mainPadding ,10px);
+    margin: var(--mainPadding ,10px);
+}
+
+
+/* الدروس من رقم 46 إلى رقم 53 
+تكليف 1 */
+<body>
+    <div>Elzero</div>
+</body>
+
+div{
+    background-color: #eee;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    /* بتوسط المحتوى عرضيا في الصفحة */
+    justify-content: center;
+    /* بتوسط المحتوى طوليا في الصفحة */
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+    color: #ff5722;
+    box-shadow: 
+        5px  0px 0 0 #ff5722,
+        -5px 0px 0 0 #03a9f4;
+}
+
+/* تكليف 2 */
+<body>
+    <div class="parent">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    
+</div>
+</body> 
+
+
+.parent {
+    background-color: #eee;
+    height: 300px;
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+}
+
+div{
+    height: 30px;
+    width: calc(88% / 3);
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* التكليف 03 */
+
+<body>
+    <div class="parent">
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <div class="four">4</div>
+    <div class="five">5</div>
+    <div class="six">6</div>
+</div>
+</body>
+
+.parent {
+    background-color: #eee;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap-reverse row-reverse;
+}
+.one ,
+.two ,
+.three ,
+.four ,
+.five ,
+.six {
+    background-color: cadetblue;
+    color: white;
+    width: calc(94% / 3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.one {
+    height: 50px;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+.two {
+    height: 150px;
+    align-items: center;
+}
+.three {
+    height: 50px;
+    flex-flow: wrap-reverse row-reverse;
+    order: 4;
+    align-self: start;
+}
+
+.four {
+    height: 150px;
+    align-items: center;
+    order: 3;
+
+}
+.five {
+    height: 150px;
+    flex-flow: wrap-reverse row-reverse;
+
+}
+.six {
+    height: 150px;
+    align-items: center;
+    flex-flow: wrap-reverse row-reverse;
+    order: 5;
+
+}
+
+/* التكليف 04 */
+<body>
+    <div class="parent">
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+</div>
+</body>
+
+
+/* التكليف 05 */
+<body>
+    <div class="parent">
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <div class="four">4</div>
+</div>
+</body>
+
+.parent {
+
+    background-color: #eee;
+    height: 300px;
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.one {
+    color: white;
+    background-color: #ff9800ed;
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    margin-top: 10px;
+
+}
+.two {
+        color: white;
+    background-color: #8bc34a;
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        order: 3;
+        margin-top: 10px;
+            align-self: flex-end;
+
+} 
+.three {
+    color: white;
+    background-color: #795548;
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        order: 4;
+        margin-top: 10px;
+
+}
+.four {
+    color: white;
+    background-color: #3a4aa3;
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+        align-self: flex-end;
+
+}
+
+<body>
+    <header>
+        <div class="logo">Logo</div>
+    </header>
+    <nav class="Navigtion">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        
+    <section class="main-area">
+        <section class="content">
+            Content
+        </section>
+        <aside class="sidebar">
+            Sidebar
+        </aside>
+
+        
+    </section>
+    <section > 
+        <div><br></div>
+    </section>
+    <footer>
+        
+        <div class="copyright">Copyright&#169; 2022</div>
+        <div class="design">Designed&#128154;Mohammed</div>
+    </footer>
+</body>
+
+
+:root {
+    --maincolor:#74747440
+}
+
+.logo {
+    background-color: var(--maincolor);
+    height: 30px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Navigtion ul {
+    background-color: var(--maincolor);
+    list-style: none;
+    /* عشان في عنصر جبنوا فلازم يكون inline-flex */
+    display: inline-flex;
+    height: 30px;
+    width: 438px;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    align-items: center;
+}
+.Navigtion li {
+
+    margin: 5px;
+
+}
+.main-area .content {
+    background-color: var(--maincolor);
+    height: 300px;
+    width: 60%;
+   
+}
+
+.main-area .sidebar {
+    background-color: var(--maincolor);
+    height: 300px;
+    display: flex;
+    margin-left: 62%;
+    margin-top: -300px;
+    width: auto;
+    position: relative;
+}
+.sidebar::before{
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 10px;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    /* تدرج اللوان فالخلفية والتحكم فيها */
+    background-image: linear-gradient
+        (to left, 
+        #607d8b 20%
+        #9c27b0 20%,
+        #9c27b0 40%,
+        #4caf50 40%,
+        #4caf50 60%,
+        #ff5722 60%,
+        #ff5722 80%,
+        #ffc107 80%,
+        #ffc107 90%,
+        #cc8d3a);
+}
+footer {
+    background-color: var(--maincolor);
+    
+}
+.copyright {
+    height: 0px;
+}
+.design {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+/***************/
+<body>
+    <div class="page">
+
+        <div class="header">
+            <div class="logo">Logo</div>
+            <ul class="links">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        
+        <div class="main-area">
+            <div class="content">Content</div>
+            <div class="sidebar">Sidebar</div>
+        </div>
+
+        <div class="footer">
+            <div class="copyright">Copyright 2021</div>
+            <div class="design">Designed By Elzero</div>
+        </div>
+    </div>
+</body>
+
+:root {
+    --maincolor: #c9c9c9;
+}
+
+
+.page{
+    background-color: #eee;
+    height: 600px;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+        border-bottom: 3px solid #4d4d4e;
+    
+
+}
+.logo {
+    background-color: var(--maincolor);
+    height: 30px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+.links  {
+    background-color: var(--maincolor);
+    list-style: none;
+    /* عشان في عنصر جبنوا فلازم يكون inline-flex */
+    display: inline-flex;
+    height: 30px;
+    width: 438px;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    align-items: center;
+    
+}
+.links li {
+    margin: 5px;
+}
+
+.content {
+    background-color: var(--maincolor);
+    height: 300px;
+    width: 60%;
+
+}
+.sidebar{
+    background-color: var(--maincolor);
+    height: 300px;
+    display: flex;
+    margin-left: 62%;
+    margin-top: -300px;
+    width: auto;
+
+}
+.footer {
+    background-color: var(--maincolor);
+    margin-top: 5px;
+    
+}
+.copyright {
+    height: 0px;
+}
+.design {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    justify-content:
+
+}
+
+/* ***********Gradients تدرج اللوان ******* */
+
+<body>
+    <div>Gradients</div>
+</body>
+
+/*
+  Gradients تدرج اللوان 
+  linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ....)
+  Direction >> to left- to right- to top - to left 
+  Angle >> 0 90 180 270 360 deg .
+  color >> (red 20%, green 20-40% blue 40-60% yellow 60-80% ) 20-100% its start and break color .
+
+*/
+
+div {
+  width: 400px;
+  height: 200px;
+  background-color: #eee;
+  margin: 20px auto;
+  position: relative;
+  padding: 10px;
+}
+div:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  height: 10px;
+  background-image: linear-gradient(
+    to right,
+    #2980b9 20%,
+    #27ae60 20%,
+    #27ae60 40%,
+    #d35400 40%,
+    #d35400 60%,
+    #8e44ad 60%,
+    #8e44ad 80%,
+    #c0392b 80%
+  );
+}
+
+
+/*الدروس من رقم 54 إلى رقم   الصور
+  
+ >> Syntax: none | <filter-function-list>
+  1- blur >>الضباب 
+  2-grayscale >>ابيض اسود 
+  3-invert انعكاس الصورة 
+  4-opacity >>الشفافية 
+*/
+<body>
+
+    <img src="../Css/How-To-Become-A-Software-Engineer.png" alt="" />
+</body>
+
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  transition: 0.2s;
+  /*grayscale  */
+  filter: grayscale(100%);
+  filter: blur(40px); /*|| blur(1.17rem)*/
+  /* بتعمل ظل تحت العنصر في محول  اكس واي  */
+  /* Syntax: drop-shadow (offset-x offset-y blur-radius color)*/
+  filter:drop-shadow(30px 10px 40px #4444dd); 
+  
+}
+img:hover {
+  filter: grayscale(0);
+  filter: blur(0);
+}
+/****Gradients تدرج الالوان ****
+/* CSS defines three types of gradients:
+
+Linear Gradients (goes down/up/left/right/diagonally)>> background-image: linear-gradient()
+Radial Gradients (defined by their center)
+Conic Gradients (rotated around a center point)
+
+Using angles >>
+1- 0deg = :vertical bottom to top 
+2- 90deg= :horizontal left to right 
+3- 180deg= : :vertical top to bottom
+4- other deg :clockwise and so on >> */
+
+
+<body>
+    <div class="Gradients">
+        gradients / Gradients /grandient
+    </div>
+</body>
+
+.Gradients {
+    background-color: #eee;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    margin-top: 27px;
+    position: relative;
+}
+.Gradients::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    color: blueviolet;
+
+    background-image: linear-gradient
+    (to right,
+    #00aaff 30% ,
+    #00ff55 30% ,
+    #00ff55 70%,
+    #9c27b0 70%,
+    #9c27b0
+    );
+    top: -10px;
+    left: 0;
+}
+
+
+
+input {
+    /* Controls the color of the text insertion indicator. */
+  /* caret-color: red; المأشر بخلي لون الكارسر احمر وهدا مهم في مواقع الي بيكون فيها الهوية البصرية نمبر ون  */
+}
+a {
+    /* Syntax: auto | none | visiblePainted |
+    visibleFill | visibleStroke | visible | 
+    painted | fill | stroke | all | inherit */
+    pointer-events: none; /* النقرة علة صورة مثلا او كلمة ايش بتعمل  مثلا وين بتنقلك*/
+}
+
+
+/*********Grid*********
+
+في فرق بين ال grid sys & grid لحالو  خاصية 
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - gap: [Row Gap] [Column Gap]
+  - justify-content
+  - align-content
+  - text-align
+*/
+<body>
+    <div class="page">
+      <h2>Elzero</h2>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <section>Content</section>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+  </body>
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline-block; [جنب بعض بحطهم ]
+}
+.page {
+  height: 100vh;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(10 , 1fr);
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas: 
+    "logo logo nav nav nav nav nav nav nav nav"
+    "cont cont cont cont cont cont cont . side side"
+    "foot foot foot foot foot foot foot foot foot foot";
+}
+h2 {
+  grid-area: logo;
+  background-color: red;
+  color: white;
+}
+nav {
+  grid-area: nav;
+  background-color: blue;
+  color: white;
+}
+section {
+  grid-area: cont;
+  background-color: yellow;
+  color: white;
+}
+aside {
+  grid-area: side;
+  background-color: green;
+  color: white;
+}
+footer {
+  grid-area: foot;
+  background-color: black;
+  color: white;
+}
+/*
+  ---Grid
+  Parent*
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - gap: [Row Gap] [Column Gap]
+  - justify-content
+  - align-content
+  - grid-template-areas
+  ---Child*
+  - grid-column: [Grid-Column-Start] [Grid-Column-End]
+  - grid-row: [Grid-Row-Start] [Grid-Row-End]
+  - span >> بتدمج الخلايا مع بعض
+*/
+
+* {
+  box-sizing: border-box;
+}
+.parent {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px 10px;
+}
+.parent div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+<body>
+    <div class="parent">
+      <div style="grid-row: 1 / 5">1</div> /* ابدا من 1 لحد 4 */
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div style="grid-row: span 2 ">8</div> /* ادمج 2*/
+      <div>9</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div style="grid-column: span 3">4</div> /* 3 اعمدة*/
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
+</html>
+/*
+  Child
+  - grid-column: [Grid-Column-Start] [Grid-Column-End] يبدا من وين وينتهي وين
+  - grid-row: [Grid-Row-Start] [Grid-Row-End]
+*/
+
+* {
+  box-sizing: border-box;
+}
+.parent {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px 10px;
+}
+.parent div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+/*
+  Child
+  - grid-column: [Grid-Column-Start] [Grid-Column-End]
+  - grid-row: [Grid-Row-Start] [Grid-Row-End]
+  - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
+*/
+
+<body>
+    <div class="parent">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div
+        style="
+        background-color: green;
+/*shorthand >>
+            grid-area: 2 / 2 / 5 / 6; */
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 5;
+    grid-column-end: 6
+    grid-row: span 3;
+    grid-row-start: span 3;
+    grid-row-end: auto
+    grid-column: span 3;
+    grid-column-start: span 3;
+    grid-column-end: auto;
+    "
+
+      </div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
+
+* {
+    box-sizing: border-box;
+}
+.parent {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+  /* Syntax: <'row-gap'> <'column-gap'>? */
+  gap: 10px 10px;
+}
+.parent div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.parent {
+  margin: 20px auto;
+  height: 500px;
+  background-color: #ddd;
+  display: grid;
+  /* مهم  فعالم الresponseve */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.parent div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+/----------------------------------------------/
+
+
+/* الدروس من رقم 54 إلى رقم 56 */
+/* تكليف 1 */
+<body>
+    <div>Elzero</div>
+</body>
+
+div {
+    background-color: #eee;
+    width: 600px;
+    height: 100px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+
+} 
+/* اول حرف من الاسم بلون برتقالي  */
+div::first-letter {
+    color: #ff5722 ;
+    font-size: 60px;
+}
+div::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right,
+    #ff5722 20%,
+    #03a9f4 20%,
+    #03a9f4 40%,
+    #4caf50 40%,
+    #4caf50 60%,
+    #e91e63 60%,
+    #e91e63 80%,
+    #673ab7 80%,
+    #9c27b0);
+    
+}
+div::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right,
+    #ff5722 20%,
+    #03a9f4 20%,
+    #03a9f4 40%,
+    #4caf50 40%,
+    #4caf50 60%,
+    #e91e63 60%,
+    #e91e63 80%,
+    #673ab7 80%,
+    #9c27b0);
+    
+}
+
+    
+}
+
+/* تكليف 2 */
+<body>
+    <!-- contenteditable="true" بخلي النص قابل لتعديل  -->
+    <div class="contenar">
+        <div class="one" contenteditable="true"> Elzero  </div>
+        <div class="two" contenteditable="true"> Two</div>
+        <div class="three" contenteditable="true">Three</div>
+    </div>
+</body>
+
+.contenar div {
+    background-color: #eee;
+    height: 50px;
+    width: 600px;
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 2px;
+    padding-left:10px;
+    font-family: Arial, Helvetica, sans-serif; 
+    /* بتشيل الاطار الخارجي او بتحطوا */
+    outline: none;
+}
+
+.one,
+.two,
+.three {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    caret-color: red;
+} 
+.one::before ,
+.two::before ,
+.three::before {
+
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right, red , red 50% ,#009688 50%,#009688);
+    width: 610px; /*600 px =page width  + 10 padding-left*/
+    height: 3px;
+    bottom: 0;
+    left: 0;
+}
+/* ...الشفافية... */
+.two {
+    opacity: 0.7;
+
+} 
+.three {
+    opacity: 0.7;
+}
+.one::selection,
+.two::selection,
+.three::selection {
+    color: green;
+}
+/* 
+الدروس من رقم 57 إلى رقم 64 
+التكليف 01 */
+
+<div class="grid">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    color: white;
+    counter-increment: count;
+}
+
+div  {
+    display: grid;
+    
+    : repeat(3 , 1fr);
+    grid-template-rows: 50px auto;
+    gap: 20px 20px;
+    background: #232f72c7; 
+}
+div ::before {
+    /* عدد مع  كلمة*/
+    content: "Element"counter(count);
+    display: grid;
+    align-content: center;
+    margin-left: 100px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* التكليف 02 responsev layout */
+<div class="layout">
+    <header></header>
+    <section></section>
+    <aside></aside>
+    <footer></footer>
+</div>
+</body>
+
+* {
+    box-sizing: border-box;
+    margin: 1px;
+    padding: 1px;
+
+}
+.layout {
+    background-color: #eee;
+    /* fullsecrean page height الشاشة فل سكرين  */
+    height: 100vh ;
+    display: grid;
+    grid-template-columns: repeat( 10 , auto );
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: 
+    "header header header header header header header header header header"
+    "section section section section section section section aside aside  aside"
+    "footer footer footer footer footer footer footer footer footer footer";
+    gap: 5px 5px;
+}
+
+header {
+    grid-area: header;
+    background: #2196f3;
+    color: white;
+}
+header::after {
+    content: "Header";
+}
+section {
+    grid-area: section;
+    background: #f44336;
+    color: white;
+}
+section::after {
+    content: "section";
+}
+
+aside {
+    grid-area: aside;
+    background: #3f51b5;
+    color: white;
+}
+aside::after {
+    content: "aside";
+}
+footer {
+    grid-area:  footer ;
+    background: #009688;
+    color: white;
+}
+footer::after {
+    content: "footer";
+}
+/* التكليف 03 */
+<div class="grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+</div>
+
+.grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+}
+
+div {
+        background-color: rgb(69, 163, 96);
+    color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 20px repeat(2 ,1fr) 20px;
+    grid-template-rows: 360px 26px;
+    gap: 15px 15px;
+    text-align: center;
+}
+
+<div class="grid">
+  <div class="one">1</div>
+  <div class="two">2</div>
+  <div class="three">3</div>
+  <div class="four">4</div>
+  <div class="five">5</div>
+  <div class="six">6</div>
+  <div class="seven">7</div>
+  <div class="eight">8</div>
+</div>
+.grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+}
+
+div {
+    background: #3f51b5;
+    color: white;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(6 ,50px);
+    gap: 20px 20px;
+}
+.one {
+    grid-column: span 5;
+
+}
+.two {
+        grid-column: span 3;
+
+}
+.three {
+    grid-column: span 2;
+
+}
+.four {
+        grid-column: span 2;
+}
+
+.five {
+        grid-row: span 3;
+    grid-column: span 3;
+
+}
+.six {
+    grid-column: span 2;
+}
+.seven {
+        grid-column: span 2;
+
+}
+.eight {
+        grid-column: span 5;
+
+}
+
+/* التكليف 05 */
+<div class="grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</div>
+
+.grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+}
+div {
+    background: #e91e63;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+        grid-template-rows: repeat(2 ,25px);
+    gap: 50px;
+    align-content: space-between;
+        text-align: end;
+}
+
+
+/* الدروس من رقم 57 إلى رقم 64  تحدي على ال  grid  */
+<body>
+    <div class="all-page">
+        <div class="parg1">
+            <h3>Osama Mohammed</h3>
+            <h4>Full-Stack-Developer</h4>
+            <div class="parg-large1">
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit.
+                Explicabo quia soluta suscipit
+                maxime qui odio eaque ad 
+                asperiores, unde beatae alias
+                atque doloremque, recusandae
+                at a dolorum hic dolor tempore.
+            </div>
+            <div class="parg-small1">
+                <br>
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis eveniet tempora quia
+                consequatur. Nesciunt eos
+                natus nihil nemo fugiat,
+                eveniet in temporibus eius
+                quia sint et veritatis qui 
+                nostrum vitae
+                
+            </div>
+            <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+                <i class="material-icons">favorite</i>
+        </div>
+
+            <div class="parg2">
+                <h3>Ahmed Sayed</h3>
+                <h4>Full-Stack-Developer</h4>
+                <div class="parg-large2">
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit.
+                Explicabo quia soluta suscipit
+                maxime qui 
+                </div>
+                <div class="parg-small2">
+                    <br>
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis eveniet tempora quia
+                consequatur
+                </div>
+                <i class="material-icons">favorite</i>
+            </div>   
+            
+            <div class="parg3">
+                <h3>shady Nabil</h3>
+                <h4>Full-Stack-Developer</h4>
+                <div class="parg-large3">
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit.
+                Explicabo quia soluta suscipit
+                maxime qui odio eaque ad 
+                asperiores, unde beatae alias
+                atque doloremque, recusandae
+                at a dolorum hic dolor tempore.
+                </div>
+                <div class="parg-small3">
+                <br>
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis eveniet tempora quia
+                consequatur. Nesciunt eos
+                natus nihil nemo fugiat,
+                eveniet in temporibus eius
+                quia sint et veritatis qui 
+                nostrum vitae.
+                Lorem ipsum dolor sit amet consectetur
+                , adipisicing elit. Libero eum quisquam
+                excepturi inventore neque repudiandae
+                tempore provident, eos, quidem explicabo 
+                porro non nam cum voluptate.
+                Harum rem aliquid dolorum. Eos!
+                </div>
+                <i class="material-icons">favorite</i>
+            </div>
+
+            <div class="parg4">
+                <h3>Mohammed ibrahim</h3>
+                <h4>Full-Stack-Developer</h4>
+                <div class="parg-large4">
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit
+                Nesciunt eos
+                natus nihil nemo fugiat,
+                </div>
+                <div class="parg-small4">
+                <br>
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis eveniet tempora quia
+                consequatur. Nesciunt eos
+                natus nihil nemo fugiat,
+                eveniet in temporibus eius
+                quia sint et veritatis qui 
+                nostrum vitae.
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis eveniet tempora quia
+                consequatur. Nesciunt eos
+                natus nihil nemo fugiat,
+                eveniet in temporibus eius
+                quia sint et veritatis qui 
+                nostrum vitae.
+                </div>
+                <i class="material-icons">favorite</i>
+            </div>
+
+            <div class="parg5">
+                <h3>Mohaoud Mohammed</h3>
+                <h4>Full-Stack-Developer</h4>
+                <div class="parg-large5">
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit.
+                Explicabo quia soluta suscipit
+                maxime qui odio eaque ad 
+                asperiores, unde beatae alias
+                atque doloremque, recusandae
+                at a dolorum hic dolor tempore.
+                </div>
+                <div class="parg-small5">
+                <br>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Eaque veniam error, 
+                nihil natus ducimus quis quae similique
+                laboriosam dolor! Inventore voluptatum
+                quam nulla quidem facere. 
+                Quam eius numquam natus ab?
+                </div>
+                <i class="material-icons">favorite</i>
+            </div>
+
+            <div class="parg6">
+                <h3>EZZ Eidin</h3>
+                <h4>Full-Stack-Developer</h4>
+                <div class="parg-large6">
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit.
+                Explicabo quia soluta suscipit
+                maxime qui odio eaque ad 
+                asperiores, unde beatae alias
+                atque doloremque, recusandae
+                at a dolorum hic dolor tempore.
+                </div>
+                <div class="parg-small6">
+                    <br>
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis eveniet tempora quia
+                consequatur. Nesciunt eos
+                natus nihil nemo fugiat,
+                eveniet in temporibus eius
+                quia sint et veritatis qui 
+                nostrum vitae.
+                </div>
+                <i class="material-icons">favorite</i>
+            </div>
+
+            <div class="parg7">
+                <h3>Mohammed Sayed</h3>
+                <h4>Full-Stack-Developer</h4>
+                <div class="parg-large7">
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit.
+                </div>
+                <div class="parg-small7">
+                    <br>
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis eveniet tempora quia
+                consequatur.
+                </div>
+                <i class="material-icons">favorite</i>
+            </div>
+
+            <div class="parg8">
+                <h3>ibrhim Sayed</h3>
+                <h4>Full-Stack-Developer</h4>
+                <div class="parg-large8">
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit.
+                </div>
+                <div class="parg-small8">
+                    <br>
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis eveniet tempora quia
+                consequatur.
+                </div>
+                <i class="material-icons">favorite</i>
+            </div>
+
+            <div class="parg9">
+                <h3>Gamal Sayed</h3>
+                <h4>Full-Stack-Developer</h4>
+                <div class="parg-large9">
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit.
+                </div>
+                <div class="parg-small9">
+                    <br>
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis eveniet tempora quia
+                consequatur.
+                </div>
+                <i class="material-icons">favorite</i>
+            </div>
+
+            <div class="parg10">
+                <h3>Eman Sayed</h3>
+                <h4>Full-Stack-Developer</h4>
+                <div class="parg-large10">
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit.
+                </div>
+                <div class="parg-small10">
+                    <br>
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis eveniet tempora quia
+                consequatur.
+                </div>
+                <i class="material-icons">favorite</i>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+.all-page {
+    background: #eee;
+    /* font-size: 20px; */
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(8 ,1fr);
+    grid-template-rows: repeat(6,auto);
+    gap: 10px 10px;
+    padding: 40px; 
+}
+/* بنعمل الهوامش الداخلية للكلام بشكل رهيب جدا  */
+* {
+    padding: 10px;
+    /* بتحط  فراغ بين الحروف space letters */
+    /* letter-spacing: 2px; */
+}
+/*   الشكل عائم نحو اليمين */
+.material-icons{
+    float: right;
+}
+.parg1,
+.parg2,
+.parg3,
+.parg4,
+.parg5,
+.parg6,
+.parg7,
+.parg8,
+.parg9,
+.parg10
+{
+    border-bottom: 3px solid #ff5722;
+}
+
+h4 {
+    color: rgb(168 168 168);
+}
+
+.parg1 {
+    background-color: white;
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.parg-large1 {
+    font-weight: bold;
+}
+.parg-small1 {
+    opacity: 0.8;
+    font-family: system-ui;
+}
+.material-icons {
+    
+}
+/*******************/
+.parg2 {
+    background-color: white;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.parg-large2 {
+    font-weight: bold;
+}
+.parg-small2 {
+    opacity: 0.8;
+    font-family: system-ui;
+
+}
+/*******************/
+.parg3 {
+    background-color: black;
+    color: white;
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.parg-large3 {
+    font-weight: bold;
+}
+.parg-small3 {
+    opacity: 0.8;
+    font-family: system-ui;
+
+}
+/*******************/
+.parg4 {
+    background-color: white;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+.parg-large4 {
+    font-weight: bold;
+}
+.parg-small4 {
+    opacity: 0.8;
+    font-family: system-ui;
+
+}
+/*******************/
+.parg5 {
+    background-color: black;
+    color: white;
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.parg-large5 {
+    font-weight: bold;
+}
+.parg-small5 {
+    opacity: 0.8;
+    font-family: system-ui;
+}
+/*******************/
+.parg6 {
+    background-color: black;
+    color: white;
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.parg-large6 {
+    font-weight: bold;
+}
+.parg-small6 {
+    opacity: 0.8;
+    font-family: system-ui;
+
+}
+/*******************/
+.parg7 {
+    background-color: white;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.parg-large7 {
+    font-weight: bold;
+}
+.parg-small7 {
+    opacity: 0.8;
+    font-family: system-ui;
+}
+/*******************/
+.parg8 {
+    background-color: black;
+    color: white;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.parg-large8 {
+    font-weight: bold;
+}
+.parg-small8{
+    opacity: 0.8;
+    font-family: system-ui;
+
+}
+/*******************/
+.parg9 {
+    background-color: white;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.parg-large9 {
+    font-weight: bold;
+}
+.parg-small9 {
+    opacity: 0.8;
+    font-family: system-ui;
+}
+/*******************/
+.parg10 {
+    background-color: white;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.parg-large10 {
+    font-weight: bold;
+}
+.parg-small10 {
+    opacity: 0.8;
+    font-family: system-ui;
+}
+
+/* <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> */
+/*--------------Css code >> mtarial icon جاهزة من النت ------------------/
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v139/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+    color: #bbbbbb;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/****مشروع 1*/
+<!DOCTYPE html>
+<html lang="en" 
+    style="font-size: 16px;"
+    >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heirloom Equine Portraits</title>
+    <!-- import  external css file -->
+    <link rel="stylesheet" href="./Css/master.css">
+    <link rel="stylesheet" href="./Css/library.css">
+    <!-- مثلا بدي اعمل ملف خاص بالمواقع العرببة فحال كام الموقع بدعم العربية =نفسوا نفس الملف الانجليزي
+        او الماستر بس بيكون مثلا الخط من اليمين لشمال وحجم الخط  وغيروا  -->
+    <link rel="stylesheet" href="./Css/master.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head> 
+<!-- مرجع semantic >> html5  -->
+<!-- https://bunch-media
+    .com/2021/06/03/html5-semantic
+    -elements-explained/ 
+-->
+<body>
+    <!-- semantic elements : -->
+    <header class="header_icon">
+        <h1>Art of Drawing&Creativity</h1>
+        <p>Heirloom Equine Portraits</p>
+    </header>
+    <nav class="nav-top">
+        <a href="#">Home</a>
+        <a href="#">Available for Purchase</a>
+        <a href="#">Oil Gallery</a>
+        <a href="#">Acrylic Gallery</a>
+        <a href="#">Information&Pricing</a>
+        <a href="#">Las Vegas Art Show</a>
+    </nav>
+    <section class="container">
+        <section class="all-artical">
+            <article class="artical-one">
+                <figure>
+                    <img src="https://via.placeholder.com/500X400"" alt="">
+                    <figcaption>
+                        <hr>
+                        <h4>TITLE HEADING</h4>
+                        <p>Some text about pic..</p>
+                        <hr>
+                        <h5>Title description, 2022,Oct,19</h5>
+                    </figcaption>
+                </figure>
+            </article> 
+            <article class="artical-two">
+                <figure>
+                    <img src="https://via.placeholder.com/500X400"" alt="">
+                    <figcaption>
+                        <hr>
+                        <h4>TITLE HEADING</h4>
+                        <p>Some text about pic..</p>
+                        <hr>
+                        <h5>Title description, 2022,Oct,19</h5>
+                    </figcaption>
+                </figure>
+            </article> 
+            <article class="artical-three">
+                <figure>
+                    <img src="https://via.placeholder.com/500X400"" alt="">
+                    <figcaption>
+                        <hr>
+                        <h4>TITLE HEADING</h4>
+                        <p>Some text about pic..</p>
+                        <hr>
+                        <h5>Title description, 2022,Oct,19</h5>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="artical-four">
+                <figure>
+                    <img src="https://via.placeholder.com/500X400"" alt="">
+                    <figcaption>
+                        <hr>
+                        <h4>TITLE HEADING</h4>
+                        <p>Some text about pic..</p>
+                        <hr>
+                        <h5>Title description, 2022,Oct,19</h5>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="artical-five">
+                <figure>
+                    <img src="https://via.placeholder.com/500X400"" alt="">
+                    <figcaption>
+                        <hr>
+                        <h4>TITLE HEADING</h4>
+                        <p>Some text about pic..</p>
+                        <hr>
+                        <h5>Title description, 2022,Oct,19</h5>
+                    </figcaption>
+                </figure>
+            </article> 
+            <article class="artical-six">
+                <figure>
+                    <img src="https://via.placeholder.com/500X400"" alt="">
+                    <figcaption>
+                        <hr>
+                        <h4>TITLE HEADING</h4>
+                        <p>Some text about pic..</p>
+                        <hr>
+                        <h5>Title description, 2022,Oct,19</h5>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+        
+    </section>
+    <aside class="sidebar">
+        <div class="sidebar-me">
+            <h2>About The Artist</h2>
+            <figure>
+                <img src="#" alt="">
+
+                <figcaption>
+                    Some text about me
+                </figcaption>
+            </figure>
+        </div>
+        <div class="sidebar-contact">
+            <h2>Contact the Artist</h2>
+            <figure>
+                <img src="#" alt="">
+                <figcaption>
+                    Some text about me
+                </figcaption>
+            </figure>
+        </div>
+    </aside>
+    <footer>
+        <div class="list-unstyled social">
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#"> inat</a></li>
+                <li><a href="#">twee</a></li>
+                <li><a href="#">Whatsapp</a></li>
+            </ul>
+        </div>
+        <div class="owner">
+            <p>© Heirloom Equine Portraits 2000-2009</p>
+            <p>All work is copyrighted and may not be used in any form without the artists express permission.</p>
+        </div>
+        <div class="developer">
+            <p>Made With&#128515;By<a href="https://abureada2017@gmail.com"><em>Mohammed-abu-Raida</em></a>© 2022</p>
+        </div>
+        
+    </footer>
+</body>
+</html>
+/*******************/
+
+* {
+    font-family: "Cairo", sans-serif;;
+    box-sizing: border-box;
+    padding: 7px;
+}
+body {
+    background-color: #eee;
+}
+:root {
+    --navcolor: #8bc34a;;
+    --maincolor:#eee
+}
+.header_icon {
+    background: white;
+    text-align: center;
+    position: relative;
+    
+
+}
+.header_icon h1::before{
+    width: 40px;
+    height: 40px;
+    background-color: rebeccapurple;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-radius: 50px 10px;
+    transition: 0.3s;
+}
+.header_icon h1  {
+    background-color: white;
+}
+.header_icon p {
+    background-color: white;
+    letter-spacing: 10px;
+    font-size: 35px;
+}
+.header_icon p::first-letter {
+    content: "";
+    color: var(--navcolor);
+    font-size: 30px;
+}
+.nav-top{
+    background-color: var(--navcolor);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.nav-top a {
+    text-decoration: none;
+    font-size: 15px;
+    background-color: var(--navcolor);
+    color: white;
+    margin: 3px;
+    font-weight: bold;
+}
+.nav-top a ::after {
+    content: "";
+    position: absolute;
+    background-image: url("G:\project frontend\img\backgroung img.png");
+}
+.nav-top :hover {
+    color: rgb(0, 68, 128);
+}
+.container .all-artical {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2 , 1fr);
+    gap: 20px 20px;
+    background: white;
+    justify-content: start;
+}
+.all-artical h4 {
+    margin-top: 10px;
+}
+.artical-one,
+.artical-two,
+.artical-three,
+.artical-four,
+.artical-five,
+.artical-six
+{
+    border-bottom: 3px solid var(--navcolor);
+    
+}
+.sidebar {
+    display: flex;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1 ,auto);
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px 20px;
+    background: white;
+    float: right;
+}
+footer {
+    margin: auto;
+    background:var(--navcolor);
+    color: white;
+}
+
+/*******/
+transform:      scale() التمدد ناحية 
+                scale3d()  ثلاتي الابعاد
+                scaleX() 
+                scaleY()
+                scaleZ();
+
+transform:      rotate() الدوران  ناحية ايش
+                rotate3d() 
+                rotateX() 
+                rotateY() 
+                rotateZ();
+                
+transform:      skew() النحراف
+                skewX() 
+                skewY();  
+
+transform:      translate() الانتقال 
+                translate3d() 
+                translateX()
+                translateY() 
+                translateZ(); 
+                
+    /* بقدر احط كل الي فوق في سطر واحد  كم خلال الماتركس */
+    # ممكن اعمل انتقال ودوران وتمدد  بنفس ال  transform;    
+     
+    transform: matrix( scaleX() skewY() skewX() scaleY() translateX() translateY() ) ;        
+    
+    transform-origin: 0%;
+
+    transform-style:
+        <default value>flat ما بحفظ العنصر حالتو لما يكون عائم بال 3d, 
+    preserve-3d  >>; بتخلي العنصر او العناصر  يحفظ حالتها الاولى فال  d3 space  لما تعمل مع العنصر فليب او اي انتقال
+
+    transform-box: ;
+
+    perspective-origin: 50% 50% ,center center, top bottom, ...;   
+
+    perspective: 300px; المسافة بيني وبين العنصر الي هيتحرك فالمحور الثاالت Z
+
+    perspective-origin: center center;   perspective: 300px;ما بتشتغل بدون  ال 
+    transition: transition 1s; 
+    backface-visibility: hidden;  السطح بدك  اياه  ظاهر او  مخفي 
+
+/* الدروس من رقم 65 إلى رقم 67 */
+/* <body>
+    <div>Elzero</div>
+</body>
+
+body {
+    background-color: white;
+}
+div {
+    color: #03a9f4;
+    font-size: 70px;
+    background-color: #eee;
+    height: 200px;
+    width: 300px;
+    font-weight: 600;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+div::before {
+    position: absolute;
+    background: #f32195;
+    height: 200px;
+    width: 315px;
+    content: "";
+    z-index: -1;
+    transform: rotate(7deg);
+}
+div::after{
+    position: absolute;
+    background: #2196f3;
+    height: 200px;
+    width: 315px;
+    content: "";
+    z-index: -1;
+    transform: rotate(-7deg);
+} */
+/* تكليف3 */
+/* div{
+    font-size: 50px;
+    background-color: #eee;
+    height: 200px;
+    width: 200px;
+    font-weight: 600;
+    margin: 50px auto;
+    display: grid;
+    border-radius: 50%;
+    align-items: center;
+    justify-items: center;
+}
+
+div::before,
+
+div::after {
+    position: absolute;
+    content: "";
+    background: white;
+    height: inherit;
+    width: inherit;
+    z-index: -1;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+div::after {
+    border: 10px solid;
+    border-color: #e91e63 #e91e63 #e91e63 transparent;
+    transition: 0.5s 500ms >> 500ms delay
+}
+div::before {
+    border: 20px solid;
+    border-color: #2196f3 #2196f3 #2196f3 transparent;
+    transition: 0.5s;
+}
+div:hover::after,
+div:hover::before {
+    transform: rotate(1turn);
+}  */
+/* 
+//تكليف1
+:root {
+    --mainncolor: orangered;
+}
+h1 {
+    color: white;
+    position: relative;
+    font-size: 50px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background-color: var(--mainncolor);
+    z-index: -1;
+} */
+
+/* التكليف 02 */
+/* :root {
+    --maincolor:#009688;
+}
+h1 {
+    color: white;
+    position: relative;
+    font-size: 50px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+>largepart 
+h1::before {
+    content: "";
+    width: 150px;
+    height: 100px;
+    background-color: var(--maincolor);
+    position: absolute;
+    z-index: -1;
+    transform: matrix(1.3, 0, 0.4, 1, -13, 0);
+}
+>smalpart 
+h1::after {
+    content: "";
+    width: 20px;
+    position: absolute;
+    height: 100px;
+    background-color: var(--maincolor);
+    transform: matrix(1, 0, 0.4, 1, -130, 0);
+}
+ */
+
+
+/* //تكليف4
+
+div {
+    content: "";
+    background-color: #607d8b;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 90px auto;
+    border-bottom: 5px solid;
+    position: relative;
+}
+div::after{
+    content: "ELzero";
+    color: white;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: matrix(1, 0, 0, 1, -70, 84);
+}
+div::before {
+    content: "";
+    color: white;
+    position: absolute;
+    height: 135px;
+    width: 136px;
+    background-color: black;
+    transform: rotate(45deg);
+    top: -70px;
+    border: 3px solid;
+    border-color: transparent white white transparent;
+
+} */
+
+/* التكليف 05 */
+:root {
+    --frontcolor:#e91e63;
+    --backcolor:#03a9f4;
+}
+
+div {
+    content: "";
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    margin-top: 77px;
+    position: relative; 
+    /* بتخلي المسافة بينك  وبين العنصر قديه في ال 3 دي */
+    perspective: 600px;
+    transform-origin:  left center;
+
+}
+div::after,
+div::before {
+    height: 200px;
+    width: 200px;
+    font-size: 30px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        /* العنصر يحفظ حالتو الطبيعية لما يعمل انتقال فال 3 دي */
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    
+    /* بحفظ  حالة انتقال العنصر فال 3دي سبيس */   
+
+}
+div::before {
+    content: "Back";
+    background-color: var(--backcolor);
+    color: white; 
+}
+div::after{
+    content: "Front";
+    background-color: var(--frontcolor);
+    color: white;
+    backface-visibility: hidden; 
+}
+div:hover::after,
+div:hover::before {
+    /* قم بعمل الشكل مرة بطريقة عرضية ومرة بطريقة طولية */
+        transform: rotateY(180deg)  ;
+        transform: rotateX(180deg)  ;
+}
+
+
+/** animation
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+>> هان يمعلم افض صفحة بعد الw3-shcool  
+https://cssreference.io/property/animation-fill-mode/
+div {
+    height: 100px;
+    width: 100px;
+    background-color: #eee;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: #cddc39;
+    border-left-color: transparent;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    /*  الشكل الي بتحرك فيه الاينميشن 
+    animation-timing-function: linear;
+    /*  بحتفظ باخر اشي وصلوا فالانيميشن ,زي مثلا لون محددد 
+    animation-fill-mode: backwards;
+    بدك  الانيميشن شغال ولا طافي
+    animation-play-state: running; 
+
+    /**Shorthand property combines six of the animation properties into a single property.*/
+    /* animation: name duration, timing-function, delay ,iteration-count, direction ,fill-mode;
+       animation: spin   1s         linear           1s     infinite         reverse    backwards; */
+      
+
+  /*animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: spin; 
+}
+@keyframes spin {
+    0% { or >> from
+        transform: rotate(0deg);
+        background-color: black;
+    }
+    100% { >>to
+        transform: rotate(360deg);
+        background-color: rgb(20, 118, 73);
+    }
+} 
+
+*/
+/*
+  /**********************CSS Selectors***************
+    * >> target all  page 
+    - Element => [p, div, h2]
+    - Element OtherElement => div p
+    - .class-name
+    - #id-name
+
+    - .parent .child >>with space 
+    >> بدور على عنصر الو كلاس اسموا تشيلد *جوات* عنصر  الو كلاس  اسموا بيرنت  واحتمال بينهم  يكون  عناصر  .
+    - .parent.child >>without space
+    >>   واحتمال يكون بينهم عناصر/ بدور على نفس العنصر جوات اتنين كلاس او اكتر  وبعمل علبهم  الفانكشن,يعني بجمع كلاسين لنفس العنصر
+    يعني نفس العنصر بدور عليه جوات 2 كلاس  جرووب 
+    - .class-name div, .class-name p
+    >> بدور على ديف جوات كلاس اسموا وبينهم كناصر وكذلك ال العنصر التاني من كلاس تاني 
+    - Element.class-name => p.class-name
+    >> بتارجت  كل الفقرات  جوات الكلاس 
+    - .parent >.child => Direct Child 
+    or
+    -.parent>.child:last-of-type=> Direct Child ممكن كونوا مباشرة على نفس الخط  من نفس الاب
+    >> اي كلاس شيلد مش ورا كلاس البيرنت مباشرة  مش هيعمل عليه تارجت
+    
+    >> في دايركت  elements and class ركز 
+/*79
+  CSS Selectors
+  - Element + Other Element =>EX: [div + p]  >> + next elem
+  >>يعني بعمل تارجت  لكل الديف الي بيجي قبلها بارجراف مباشرة ,,يعني من نفس الاب وعلى نفس المستوى بس
+  حتى لو اجرى بينهم  مثلا ما بتعامل مع  الي بعد  الفاصل وبتخطاه
+
+- Element ~ Other Elements =>EX: [p ~ div] >> ~ direct elem الاشقاء
+هان لازم  يكونوا اشقاء من نفس الاب حتى لو فصل بينهم اشي عادي مهم شقيق من الاب  وما بتعامل مع الابن من الشقيق
+  
+  - [Attribute] >>EX: [pargraph]>> يعني كل العناصر الي فيها كلاس اسموا بارجراف اعملي عليه المطلوب
+  - Element[Attribute] >>EX: div[pargraph] 
+  - [Attribute=Value] >>[type = "text"]
+  - Element[Attribute=Value] => input[type="submit"]
+  - [Attribute~=Value] => Contains A Word
+  - [Attribute*=Value] => Contains A Astring
+  - [Attribute^=Value] => Start With A String
+  - Element[Attribute$="Extension"] a[href$=".org"
+  - Element[Attribute=Value s] s= sensitive يعني في حال كان اسم حساس مثلا كابتل او سمول بنستخدمها
+  - Element[Attribute=Value i] i =insensitivesمش حساش 
+  
+   Links that start with "https" and end in ".org" 
+   a[href^="https"][href$=".org"]
+*/
+/*3
+  CSS Selectors
+  - :first-child
+  - :last-child
+  - :first-of-type
+  - :last-of-type
+  - :only-child >>فقط اول ابن"ابن وحيد"ومعهوش ولا ابن تاني او اخو  تاني
+  - :only-of-type>> هان يكون وحيد من نوعوا معاه اشي تاني مش من نفس النوع
+   
+  */
+/*
+  CSS Selectors
+  - :not(Selectors)  >> يعني اختار كل العناصر ماعدا هدا الselector
+  - :nth-child(n) >> عنصر تشيلد  رقم كزا
+  - :nth-last-child(n) >>   يعني بيبدا يعد  من تحت من اخر عنصر ||عنصر تشيلد من  الاخر 
+  - :nth-of-type(n) ..  العنصر من  نوع  كدا اعمل عليه فانكشن كزا
+  - :nth-last-of-type(n).. من اخر اشي  اعمل 
+*/
+/*
+  CSS Selectors
+  - :root
+  - :checked
+  - :empty
+  - :disabled
+  - :required
+  - :focus
+  - ::selection
+  - ::placeholder
+*/
+
+
+
+/* الدروس من رقم 74 إلى رقم 77 */
+
+/* div {
+    height: 50px;
+    width: 50px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: transparent orange orange orange;
+    position: relative;
+    animation-name: rotate-CW;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+div::before,
+div::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+}
+div::before {
+  height: 40px;
+  width: 40px;
+  border: 3px solid;
+  border-color: #4088cb transparent #4088cb #4088cb;
+  margin: 2px 2px;
+}
+div::after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #d30e98 #d30e98 #d30e98 transparent;
+  margin: 7px 7px;
+}
+div:hover{
+  transform: rotate(1turn);
+  
+} 
+
+@keyframes rotate-CW {
+  100% {
+    transform: rotate(1turn);
+  } 
+
+} */
+
+/* تكليف 2 */
+/* div {
+    height: 50px;
+    width: 50px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: #050505  #050505 transparent  #050505 ;    
+    position: relative;
+    animation-name: rotate-CW;
+    animation-duration: 1.7s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode:both;
+    animation-direction: reverse;   
+}
+/* div::before,
+div::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  
+} 
+div::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 3px solid;
+  border-color: orange orange transparent orange;
+  margin: 2px 2px;
+  /* animation: rotate-befor-CCW2 1.2s linear 0s infinite reverse both;
+  animation-name: rotate-CW;
+    animation-duration: 1.7s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode:both;
+    animation-direction: reverse;
+}
+div::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #4088cb #4088cb  transparent #4088cb;
+  margin: 7px 7px;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation-name: rotate-CW;
+  animation-duration: 1s;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode:both;
+  animation-direction: reverse;
+}
+div:hover::after,
+div:hover,
+div:hover::before
+{
+  transform:  rotate(1turn); 
+} 
+
+@keyframes rotate-CW {
+  100% {
+    transform: none;
+  } 
+}
+@keyframes rotate-after-CCW2{
+  100% {
+    transform: none;
+  }
+}
+@keyframes rotate-befor-CCW2{
+  100% {
+      animation: none;
+
+  }
+} */
+
+/* التكليف 04 */
+
+/* .containar {
+    font-family: arial;
+    font-size: 200px;
+    color: #222222;
+    display: flex;
+    letter-spacing: -12px;
+    margin: 20px auto;
+    position: relative;
+}
+.E::before {
+  content: "";
+    background-color: orange;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    margin: 44px 107px;
+
+
+    
+}
+.L::after {
+  content: "";
+    background-color: orange;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    margin: 171px 0px 0px -10px;
+        animation-name: Ro2;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    /* الشكل هيمشي كيف وهل خطوات او تزحلق او ووو 
+    animation-timing-function:linear;
+    /* بحفظ اخر حالة الو وما برجع لاول نقطة بدا منها  */
+    /* animation-fill-mode: forwards; */
+    
+}
+/* في %مشكلة في تحرك النيمشن 
+@keyframes Ro2 {
+  0%{top: 0;}
+  25%{transform: translateX(-71px) }
+  50%{ top: -130px; bottom: -130px;}
+  75%{transform: translateY(-71px)}
+  100%{}
+
+}
+/* تكليفات ال selectors */
+/* 1 
+<element class="main red">
+div.main.red {
+    color: red;
+}
+/* 2
+div.parent>.child:last-child {
+    color: red;
+}*/
+
+/* 3
+.parent>.baby:only-child {
+    color: red;
+}
+or
+div.parent>.baby:only-of-type {
+    color: red;
+}
+.parent>.baby {
+    color: red;
+}  */
+
+/* 4
+div[title]{
+    color: red;
+} 
+div[title]:not(div.no-need.parent [title]) {
+    color: red;
+}*/
+/* 5XXX 
+p~div[title="Elzero"]:last-child:not(div.no-need p~div, div.no-need[title="Elzero"]) {
+    color: red;
+} */
+
+
+/* 6
+div :nth-child(3):not(p , div.no-need :nth-child(3)) {
+    color: red;
+} */
+/*7 مش زابط  div:nth-last-of-type(2):not(p~div,div.no-need,.no-need-2) {
+    color: red;
+} */
+
+/* التكليف 08 
+div :not(p,h3,div:first-child,:last-child){
+    color: red;
+}*/
+
+/* ********media queries********** responsev screen
+
+https: //getbootstrap.com/docs/5.1/layout/grid/
+https: //getbootstrap.com/docs/5.1/layout/breakpoints/*/
+// X-Small devices (portrait phones, less than 576px)
+@media (min-width: 575px) {
+    ... 0>>575px
+}
+
+// No media query for `xs` since this is the default in Bootstrap
+// -Small devices (landscape phones, 576px and up)
+@media (min-width: 767px) {
+    ... 576px min>>767px max
+}
+
+فالعادة بندمج الشاشات الصغيرة عالاخر مع الي قبلها فبنحط زي هي 0>>767px // Medium devices (tablets, 768px and up)
+/* medium screen */
+@media (min-width: 768px) {
+    ... 768px>>991px
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    ... 992px>>1199px
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    ... 1200px>>1399px
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    ... 1400px>>...
+}
+
+
+<div class="parent">
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+</div>
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    /* space = 10px from  width */
+    justify-content: space-evenly;
+}
+
+.parent>div {
+    background-color: teal;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+    /* padding: 10px; */
+}
+
+/* html
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+*/
+
+/* mobile and small  screen */
+/* هان ما بنحطها للان  اساسا الناصر هيا بايديفلت بعرض 100% */
+@media (max-width:767px) {   *#small screen
+    .parent>div {
+        width: calc(100%);
+    }
+}
+/* small screen */
+@media (min-width:768px) {
+    .parent>div {
+        width: calc(50% - 10px);
+    }
+}
+/* meduim screen */
+@media (min-width:991px) {
+    .parent>div {
+        width: calc(25% - 5px);
+    }
+}
+/* large screen */
+@media (min-width:992px) {
+    .parent>div {
+        width: calc(25% - 5px);
+    }
+}
+
+<div class="parent">
+<div class="center-postions  cricul-100p">child</div>
+</div>
+<div class="prouect center-postions cricul-200p">prodect</div>
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.parent {
+    position: relative;
+    background-color: #eee;
+    height: 200px;
+    width: 1200px;
+    margin: 20px auto;
+
+}
+
+.parent div {
+    background-color: green;
+    color: white;
+    /* left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%); */
+}
+
+.prouect {
+    background-color: rgb(182, 92, 18);
+    color: white;
+    /* left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%); */
+}
+/*تابع using framwork to reduies the used code 
+احنا فالاساس بنتسخدم  الفريم فورك عشان  نقلل عدد لاكودا المشتخدمة الي هتتكرر في كزا كلاس 
+واحنا ما بنسخدموا لاشي مش  عارفين نعملوا ,لا للقت والسرعة   
+framwork >>>*/
+.center-postions {
+    /* بنوسط المحتوى فالنص */
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.cricul-100p {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.cricul-200p {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+تكليف1 <div class="assign-one">Elzero Web School</div>.assign-one {
+    /* height: 200px;
+  width: 200px; */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: orchid;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+/* خاص بالابرينت */
+@media print {
+    .assign-one {
+        font-size: 90px;
+    }
+}
+/* Global values
+:inherit;
+:initial;
+:revert;
+:revert-layer;
+:unset;
+CSS Global Values***
+- inherit
+- initial
+- unset
+--- If Inherit => inherit
+--- If Not => initial
+- revert CSS Level [4]
+- all
+*/
+
+<div>
+    <span>Span</span>
+    <strong>Strong</strong>
+    <span>Span</span>
+    <p>Paragraph</p>
+    <button>Button</button>
+</div>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+div {
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #eee;
+    padding: 20px;
+    margin: 5px;
+    border: 2px solid black;
+}
+الدروس من رقم 83 إلى رقم 85
+/* التكليف 02 */
+* {
+    box-sizing: border-box;
+    margin: 0px
+}
+
+.contier {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    justify-items: center;
+}
+
+.framwork-sizing :last-child {
+    font-weight: initial;
+    color: initial;
+}
+
+/* framwork to redce code  */
+.framwork-sizing {
+    height: 80px;
+    width: 100%;
+
+    background-color: #eee;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* اطار عمل  */
+
+/* mobile and Small devices */
+/* by default width =100% and one product*/
+@media (max-width: 767px) {
+    .framwork-sizing {
+        width: calc(100%);
+    }
+}
+
+/* medim screen  */
+@media (min-width: 768px) {
+    .framwork-sizing {
+        color: red;
+        width: calc(50% - 30px);
+    }
+}
+
+/* large screen  */
+@media (min-width: 992px) {
+    .framwork-sizing {
+        color: rgb(62, 140, 141);
+        width: calc(25% - 30px);
+    }
+}
+
+!----------------

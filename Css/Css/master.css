@@ -1,0 +1,65 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0px
+}
+
+.contier {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  text-align: center;
+  justify-items: center;
+  
+
+  
+}
+.framwork-sizing :last-child {
+  font-weight: initial;
+  color: initial;
+  
+  
+}
+/* framwork to redce code  */
+.framwork-sizing{
+  height: 80px;
+  /* فراغ بين السطر الاول والتاني  */
+  /* gap: 10px 10px; */
+  background-color: #eee;
+  display: grid;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+      /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+
+
+/* اطار عمل  */
+
+/* mobile and Small devices */
+/* by default width =100% and one product*/
+@media (max-width: 767px) {
+  .framwork-sizing  {
+    width: calc(100%);
+  }
+}
+
+/* medim screen  */
+@media (min-width: 768px) {
+  .framwork-sizing {
+    color: red;
+    width: calc(50% - 10px);
+  }
+}
+
+/* large screen  */
+@media (min-width: 992px) {
+  .framwork-sizing {
+    color: rgb(62, 140, 141);
+    width: calc(25% - 10px);
+  }
+}

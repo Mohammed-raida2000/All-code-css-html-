@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fuck page...</title>
+</head>
+<body>
+    
+    <section>
+        <form action="test.py" target="_self" method="post">
+            
+            <legend>Subscribe to the Newsletter</legend>
+            
+            <label for="Uname"  >Username :</label><br>
+            <input  id="Uname" type="text" name="log_name" placeholder="Username" minlength="5" maxlength="20"  autofocus autocomplete="on" required><br>
+    
+            <label for="mail">Email :</label><br>
+            <input id="mail" type="Email" name="log_mail" value="o@o.com" placeholder=" o@o.com" autocomplete="on">
+
+            <label hidden>Token :</label><br>
+            <input hidden type="text" name="log_token hidden" value="b92f1fc2fce391ad7af633723afd3055">
+
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+            <br>
+
+            <p><i>choose one or more skills from lists  </i></p>
+            <input id="1" type="checkbox" name=" skill1" value="Problem Solving">
+            <label for="1">Problem Solving</label><br>
+            <input  id="2" type="checkbox" name="skill2" value="Advanced Planning">
+            <label for="2">  Advanced Planning</label><br>
+            <input type="checkbox">
+            <label for="">Search</label><br>
+            <input type="checkbox">
+            <label for="">Analysis,</label><br><hr>
+            <!-- *********************** -->
+            <p><i>choose one job  from lists  </i></p>
+
+            <input id="3" type="radio" name="job1" value="Front-End Developer">
+            <label for="3">Front-End Developer</label> <br>
+            <input id="4" type="radio" name="job2" value="Back-End Developer">
+            <label for="4">Back-End Developer</label><br>
+            <input id="5" type="radio" name="job3" value=" Business Analyst">
+            <label for="5"> Business Analyst</label><hr>
+            
+            
+            <label for="vertion"> choose book :</label>
+            <select name="vertion" id="vertion">
+                <optgroup label=" php" class="php">
+                    <label for="">choose book</label>
+                    <option value="v5.0">v5.0</option>
+                    <option value="v7.0">v7.0</option>
+                    <option value="v8.0"> v8.0</option>
+                </optgroup>
+
+                <optgroup label=" python" class="python">
+                    <label for="">choose book</label>
+                    <option value="v5.0">v2.0</option>
+                    <option value="v7.0">v3.0</option>
+                    <option value="v8.0"> v3.9.0</option>
+
+                    <textarea 
+                            name="brief "  
+                            cols="30" rows="10" 
+                            placeholder="Write Here Why You Want To Learn Programming ">
+                    </textarea>
+
+                    
+            </select>
+            
+        </form>
+    </section>
+
+
+
+</body>
+</html>
